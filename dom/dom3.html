@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom remove</title>
+</head>
+
+<body>
+    <ul id="menu">
+        <li>home</li>
+        <li>about</li>
+        <li>contact</li>
+    </ul>
+
+    <script>
+        //removeChild...
+
+
+        let parent = document.getElementById("menu");
+
+        let elm = parent.firstElementChild.nextElementSibling; //target kele;
+
+        parent.removeChild(elm);
+
+        // var body =document.body.removeChild(parent);
+
+
+    </script>
+
+
+
+    <script>
+
+    // Clone or Copy Elemen...
+
+    var copy = document.getElementById("menu");
+
+    var elem1 = copy.cloneNode(true); //true write kele tr child and parent both copy hote...blank thevl tr only parent copy.
+    
+
+    elem1.id = "menu 1"; // id change kru shkto
+
+
+     document.body.appendChild(elem1);
+
+
+    // console.log(elem1);
+
+
+    </script>
+
+
+<script>
+
+// - Replace Element...
+
+ var parent1 =document.getElementById("menu");
+
+ var elme = document.createElement("li");
+
+ elme.textContent ="This is new li";
+
+ let replace = parent1.firstElementChild; // target keli value..
+
+ parent1.replaceChild(elme,replace);
+
+
+
+//  replace.appendChild(elme);
+
+</script>
+
+
+
+<script>
+
+// Insert Adjacent HTML...
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

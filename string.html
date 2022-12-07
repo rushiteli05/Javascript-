@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+<style>
+    body{
+        text-align: center;
+    }
+</style>
+<body>
+
+    <script>
+
+        document.write("<h3>String()</h3>");
+
+        // create string using litteral.
+
+        var str1 = "Rushikesh ";
+        var str2 = 'How Are You?';
+
+        document.writeln(str1 + str2);
+
+        // create string using new keyword.
+
+
+        var str3 = new String("<br>" + " I am Fine");
+
+        document.write(str3);
+
+
+
+
+
+
+        document.write("<hr>");
+        document.write("<h3>charAT()</h3>"); // character kiti no la konte ahe show krte.
+
+        var str4 = "How are you?";
+
+        document.write("Character at 5th position :" + str4.charAt(5));
+
+
+
+
+
+        document.write("<hr>");
+        document.write("<h3>charCodeAT()</h3>");//asscii value of a to z
+
+        var str5 = "How are you?";
+
+        document.write("Character Code at 5th position :" + str5.charCodeAt(0));
+
+
+
+
+
+        document.write("<hr>");
+        document.write("<h3>concat()</h3>");
+
+
+        var str6 = "How are you? ";
+        var str7 = "I am Fine.";
+
+        document.write(str6.concat(str7));
+
+
+
+
+
+        document.write("<hr>");
+        document.write("<h3>indexOf()</h3>"); //char chi position show krte..
+
+        var str8 = "How are you?";
+
+        document.write("index of r in str8 :" + str8.indexOf("r"));
+
+
+
+
+
+
+        document.write("<hr>");
+        document.write("<h3>LastindexOf()</h3>"); //char chi position show krte.last pasun.
+
+        var str9 = "How are you?";
+
+        document.write("index of r in str9 :" + str9.lastIndexOf("o"));
+
+
+
+
+
+
+        document.write("<hr>");
+        document.write("<h3>Search()</h3>");
+
+
+        var str11 = "How are you?";
+        var str12 = "Rushikesh";
+        var str13 = "Brain Works is a Good class.";
+
+        document.writeln("check if 'Works' exists in str13':" + str13.search('Works') + "<br>");
+
+        document.writeln("check if 'Works' exists in str13':" + str13.search('Good') + "<br>");
+
+        document.writeln("check if 'Works' exists in str13':" + str13.search(/Works/i));//case   
+
+
+
+
+
+        document.write("<hr>");
+        document.write("<h3>Match()</h3>");//same ans bhete
+
+        document.writeln("Match if 'Works' exists in str13':" + str13.match('Wor') + "<br>");
+
+        document.writeln("Match if 'Works' exists in str13':" + str13.match('Worer') + "<br>");
+
+        document.writeln("Match if 'Works' exists in str13':" + str13.match(/Wor/i) + "<br>");
+
+
+
+
+
+        document.write("<hr>");
+        document.write("<h3>Replace()</h3>");
+
+        var rush = "This is LearnEarn ";
+
+        var rush1 = "This is HTML,HTML is a must to learn Web Desing.";
+
+        document.write("InCorrect String Is :" + rush + "<br>");
+
+        document.write("Correct String Is :" + rush.replace('Earn', 'Vern') + "<br>");
+
+        document.write("Replace html :" + rush1.replace(/HTML/g, 'CSS'));//g-globaly
+
+
+
+
+
+
+
+        document.write("<hr>");
+        document.write("<h3>substring() & substr()</h3>");
+
+        var rush4 = "This is HTML,HTML is a must to learn Web Desing.";
+
+        document.writeln("New generated string using substr() :" + rush4.substr(8) + "<br>");//length dyavi lagte
+
+        document.writeln("New generated string using substring() :" + rush4.substring(13, 10));//end position dyvi lagte
+
+
+
+
+
+
+
+
+        document.write("<hr>");
+        document.write("<h3>Slice()</h3>");
+
+        var rush5 = "This is HTML,HTML is a must to learn Web Desing.";
+
+        document.write("slice string: " + rush5.slice(1));// last pasun position ghete..
+
+
+
+
+
+
+        document.write("<hr>");
+        document.write("<h3>toLowerCase()</h3>");
+
+        var aru = "RUSHIKESH CHANDRASHEKHAR TELI";
+
+        document.write("Lowercased string :" + aru.toLowerCase());//capital is change in to small
+
+
+
+
+
+        document.write("<hr>");
+        document.write("<h3>toLocaleLowerCase()</h3>");//language mdhe change asel tr ..use
+
+        var aru1 = "Rushikesh chandrashekshar teli";
+        document.write("lowercase string using tolocalelowercase: " + aru1.toLocaleLowerCase());
+
+
+
+
+
+
+        document.write("<hr>");
+        document.write("<h3>toLocaleupperCase()</h3>");
+
+
+        var aru2 = "rushikesh chandrashekshar teli";
+
+        document.write("uppercase string using tolocaleuppercase: " + aru2.toUpperCase() + "<br>");
+
+        document.write("tolocaleuppercase string using tolocaleuppercase: " + aru2.toLocaleUpperCase());//small letter converts into capital..
+
+
+
+
+
+
+        document.write("<hr>");
+        document.write("<h3>toString()</h3>");
+
+        var aru3 = "rushikesh chandrashekshar teli";
+
+        document.writeln("use tostring on string : " + aru3.toString());
+
+
+
+
+
+        document.write("<hr>");
+        document.write("<h3>valueOf()</h3>");
+
+        var aru4 = new String("This  string is defined using object");
+
+        document.writeln(aru4.valueOf());
+
+
+
+
+        
+        document.write("<hr>");
+        document.write("<h3>split()</h3>");
+
+        var aru5 = "This is HTML,HTML is a must to learn Web Desing.";
+
+        document.write(aru5.split(" "));
+
+
+
+
+        document.write("<hr>");
+        document.write("<h3>trim()</h3>");
+
+
+        ru6 = "     This is HTML,HTML is a must to learn Web Desing    .";
+
+        document.write(aru5.trim());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

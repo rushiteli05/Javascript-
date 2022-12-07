@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encapsulation</title>
+</head>
+
+<body>
+    <script>
+
+        class Employee {
+            setEmp(name, age, id) {
+                this.name = name;
+                this.age = age;
+                this.id = id;
+
+            }
+
+            getEmpname() {
+                return this.name
+            }
+            getEmpage() {
+                return this.age;
+            }
+            getEmpid() {
+                return this.id;
+            }
+
+            setEmpphone(phone) {
+                this.phone = phone;
+            }
+            getEmpphone() {
+                return this.phone;
+            };
+
+
+        };
+
+        let result = new Employee();
+
+        result.setEmp("Rushikesh", 25, 10, 7474);
+
+        console.log(result.getEmpage() + " " + result.getEmpname() + " " + result.getEmpid() + " " + result.getEmpphone())
+
+        result.getEmpname();
+
+        // result.getEmpid();
+        // result.getEmpage();
+
+        // console.log(result)
+
+
+
+
+
+
+
+
+        class Foo {
+
+            constructor(text) {
+                this._text = text;
+                if (this.constructor===Foo) {
+             throw new Error ('we cannot create a instance of abstraction ')
+            }
+            }
+             
+            /**
+             * Implementation optional
+             */
+            genericMethod() {
+                console.log('running from super class. Text: ' + this._text);
+            }
+
+            /**
+             * Implementation required
+             */
+            doSomething() {
+                throw new Error('You have to implement the method doSomething!');
+            }
+
+        }
+
+        obb = new Foo ()
+
+        class Bar extends Foo {
+
+            constructor(text) {
+                super()
+            }
+
+            genericMethod() {
+                console.log('running from extended class. Text: ' + this._text);
+            }
+
+            doSomething() {
+                super.doSomething()
+                console.log('Method implemented successfully!');
+            }
+
+        }
+
+        let b = new Bar('Howdy!');
+        b.genericMethod(); //gonna print: running from extended class. Text: Howdy
+        b.doSomething(); //gonna print: Method implemented successfully!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

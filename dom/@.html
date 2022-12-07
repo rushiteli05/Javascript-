@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #one {
+
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+    }
+</style>
+
+<body>
+    <div id="one"></div>
+    <button onclick="change()" onmouseover="Hover()">Click</button>
+
+    <ul id="list">
+        <li class ="saheb">one</li>
+        <li>two</li>
+        <li>three</li>
+        <li>fout</li>
+        <li>five</li>
+    </ul>
+
+    <ul id ="list2">
+        <li>Rushi</li>
+        <li>Adi</li>
+        <li>Parsad</li>
+    </ul>
+    <div id="test"></div>
+
+    <script>
+
+        function change() {
+
+            document.getElementById("one").style.border = '1px solid green'
+
+
+        }
+
+        function Hover() {
+
+            document.getElementById("one").style.background = 'yellow';
+
+
+        }
+
+
+
+
+
+
+
+
+
+        //replace child...
+
+        var newElement = document.createElement("li");
+
+        var newText = document.createTextNode("Hi Im Rushi");
+
+        newElement.appendChild(newText);
+
+        var target = document.getElementById("list");
+
+        var oldElement = target.children[1];
+
+        target.replaceChild(newElement, oldElement);
+
+
+        //remove chaild...
+
+        var newelement1= document.getElementById("list");
+
+        var oldElement1= newelement1.children[0];
+
+        newelement1.removeChild(oldElement1);
+
+
+
+
+        
+
+
+
+        //cloneNode.. -->copy - pest kru shkto..
+
+
+        var target = document.getElementById("list").children[0];
+
+        var copyelement = target.cloneNode(true);
+
+        console.log(copyelement);
+
+        document.getElementById("list2").appendChild(copyelement);
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

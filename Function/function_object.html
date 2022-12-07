@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function </title>
+</head>
+<body>
+    <script>
+      
+      var add = new Function("num1","num2","return num1 + num2");
+
+      document.writeln(add(4,5));
+
+      document.writeln(add(6,8));
+
+    </script>
+
+    <script>
+
+        var  power = new Function("num1","num2","return (num1 / num2)")
+
+        document.write(power(5,2))
+    </script>
+
+
+
+
+
+    <script>
+        document.write("<h3>Example Call()</h3>");
+
+        function emp(id,name){
+            this.id = id;
+            this.name = name;
+        }
+        function permanentemp(id,name){
+            emp.call(this,id,name);
+        }
+        function temporyemp(id ,name){
+            emp.call(this,id,name);
+        }
+
+        var pemp = new permanentemp(1,"rushi teli");
+        var temp = new temporyemp(2,"aditya pawae");
+
+       
+        document.writeln(pemp.id , " " ,pemp.name);
+        document.writeln(temp.id , " " ,temp.name);
+
+        document.write("<br>")
+    </script>
+    
+
+
+     <script>
+          document.write("<hr>")
+          
+         document.write("<h3>Example apply()</h3>");
+
+        var arr = [3,6,8,9];
+
+        var max = Math.max.apply(this,arr);
+        
+        var min = Math.min.apply(this,arr);
+
+        document.writeln(max);
+
+        document.write("<br>");
+
+        document.writeln(min);
+        document.write("<br>");
+
+
+        // for (value of arr){
+        //     document.writeln(value)
+        // }
+        // document.write("<br>");
+
+        // document.write("max no is:" + max);
+
+        // document.write("<hr>");
+        // var rush = [5,6,8,9]
+
+        // var min = Math.min.apply(this,rush); 
+
+        // for (value of rush){
+        //     document.write();
+        // }
+
+        // document.write("Min no is:" + min)
+        
+     </script>
+
+     <script>
+        
+
+        var arr1 =[1,2,3,4];
+        var arr2=[5,6,7,8];
+
+        document.writeln("1st array values are");
+
+        for (value of arr1){
+            document.write(value)
+        }
+
+        document.write("<br>")
+
+        document.writeln("2nd array values are");
+        for (value of arr2){
+            document.write(value)
+        }
+        document.write("<br>");
+
+        arr1.push.apply(arr1,arr2);
+
+        document.writeln("push value" , arr1)
+</script>
+
+
+
+
+
+
+
+<script>
+    document.write("<hr>");
+
+document.write("<h3>Example bind()</h3>");
+
+var website = {
+    name : "Learnvern",
+    getname : function(){
+        return this.name;
+    }
+}
+var website1={
+    name :"google",
+}
+var website2 = {
+    name:"Rushikesh",
+}
+
+var unboundgetname = website.getname;
+var boundgetname = unboundgetname.bind(website2);
+
+
+// document.write(website.getname());
+
+document.write(boundgetname());
+
+
+
+</script>
+</body>
+</html>

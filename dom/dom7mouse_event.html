@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event</title>
+</head>
+<style>
+    #box {
+        height: 200px;
+        width: 200px;
+        background-color: blueviolet;
+    }
+
+    body{
+        height: 2000px;
+    }
+</style>
+
+<body>
+    <div id="box" onclick="fun()">
+        <!--  1)ondblclick -double click 
+              2)oncontextmenu -righy click
+              3)onmouseup.
+              4)onmpusedown 
+              5)onmouseover.
+              6)onmouseout -->
+
+    </div>
+
+
+    <script>
+
+        function fun() {
+            alert("click me..!")
+        }
+    </script>
+
+
+<script>
+    //Knte key press keli ahe te find karte..
+
+    window.addEventListener("keydown",checkkey);
+
+    function checkkey(event){
+
+        console.log(event.key);
+    }
+</script>
+
+
+
+
+<script>
+
+    // window.addEventListener('scroll',function(){
+    //     console.log("scrolling....")
+    // });
+
+
+
+// scrolling up and down ......("wheel")   delta x --horizonlat scroll  delta y - vertical
+
+    window.addEventListener('wheel',function(event){
+        if(event.deltaY < 0){
+            console.log("scrolling up..")
+        }else if(event.deltaY > 0){
+            console.log("scrolling down..")
+        }
+    });
+
+
+
+</script>
+
+
+<script>
+    //pageYOffset ----scroll kel ki change ..
+
+    window.addEventListener('scroll',function(event){
+
+        if(window.pageYOffset > 150){
+            document.body.style.background="red"
+        }else{
+            document.body.style.background ='white'
+        }
+    })
+</script>
+</body>
+
+</html>

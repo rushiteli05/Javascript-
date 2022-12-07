@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date object</title>
+</head>
+<body>
+    <script>
+         document.write("<h3>using Date() :</h3>");
+        var d= new Date();
+
+        document.writeln("Todays Date is : "+d)
+
+
+
+
+
+        document.write("<hr>");
+        document.write("<h3>using Date(year,month,day,hours,min,sec,millisec) :</h3>");
+
+        var d2=new Date(2018,11,31,12,46,5,50); //month chi value position vrun bhete..
+
+        document.writeln(d2);
+
+
+
+
+
+        document.write("<hr>");
+        document.write("<h3>using Date(date string) :</h3>");
+         
+
+        var d3 = new Date("october 12,2018 12:56:03");
+
+        document.writeln(d3)
+
+
+
+
+        
+        document.write("<hr>");
+        document.write("<h3>using Date(date milliseconds) :</h3>");
+
+        var d4 = new Date(0);
+
+        document.writeln(d4);
+
+
+         
+        document.write("<hr>");
+        document.write("<h2>Get Methods:</h2>");
+
+
+        
+        
+        document.write("<h3>using getDate():</h3>");
+
+
+        var r = new Date();
+
+        document.write("todays date:"+r.getDate()+"<br>");
+
+        document.write("todays day:"+r.getDay()+"<br>");
+
+        document.write("todays month:"+r.getMonth()+"<br>");
+
+        document.write("todays year:"+r.getUTCFullYear()+"<br>");
+
+        document.write("this hour:"+r.getHours()+"<br>");
+
+        document.write("minute right now:"+r.getMinutes()+"<br>");
+
+        document.write("current sec now:"+r.getSeconds()+"<br>");
+
+        document.write("current milli sec:"+r.getMilliseconds()+"<br>");
+
+        document.write("current milli sec:"+r.toDateString()+"<br>");
+
+        document.write("current milli sec:"+r.toString()+"<br>");
+        
+        document.write("current milli sec:"+r.toTimeString()+"<br>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    </script>
+</body>
+</html>

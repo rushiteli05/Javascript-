@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arry Methods</title>
+</head>
+<style>
+    body {
+        text-align: center;
+        background-color: black;
+        color: white;
+    }
+</style>
+
+<body>
+    <script>
+        document.write("<h3> Concat()</h3>");//
+
+
+        var arr1 = ["C", "C++", "Java"];
+        var arr2 = ["HTML", "JavaScript", "Android", "Python"];
+
+        var rushic = arr1.concat(arr2);
+
+        document.writeln("Concat Arry : " + rushic); //murge hotat
+
+        document.writeln(arr2.length);  //kiti string ghetle te no mdhe find krte.
+
+
+
+
+        document.write("<hr>")
+
+        document.write("<h3>CopyWithin()</h3>");
+
+        var copyWithinarry = arr2.copyWithin(0, 1, 2);  //(start,  ,end)
+
+        document.writeln("Copied Arry : " + copyWithinarry)
+
+
+
+
+        document.write("<hr>")
+
+        document.write("<h3>Enteries()</h3>");
+
+        var Entriesarry = arr2.entries();
+
+        for (value of Entriesarry) {
+            document.writeln(value + "<br>");
+        }
+
+
+
+        document.write("<hr>")
+
+        document.write("<h3>Every()</h3>");
+
+        var arr3 = [31, 55, 63, 34];
+
+        function check(value) {
+            return value > 30;
+        }
+
+        document.writeln("Check for every element in array arr3 if its > 30 : " + arr3.every(check))
+
+
+
+        document.write("<hr>")
+
+
+        document.write("<h3>Flat()</h3>");
+
+        var arr4 = [11, 22, [33, 44], [66, 77], 99];
+
+        var flatarry = arr4.flat();
+
+        document.writeln(" Flat Array : " + flatarry);
+
+        document.write("<hr>")
+
+
+
+
+        document.write("<h3>FlatMapped()</h3>"); //divide krte all array mdhil value la
+
+        var arr5 = [2, 4, 6, 8];
+
+        var FlatMapped = arr5.flatMap(x => [x * 2]);
+
+        document.writeln("Flatmapped Array : " + FlatMapped)
+
+
+
+
+        document.write("<hr>");
+
+        document.write("<h3>Fill()</h3>")
+
+        var arr6 = ["HTML", "Java", "Css"];
+
+        var result = arr6.fill("JavaScript");
+
+        document.write(result + "<br>");
+
+        var result2 = arr6.fill("css", 0, 1); //2nd position change hoil. 0 th position la dile tr all sathi apply hoil. and 0,1 dile tr o pasun 1 parynt apply . jethe lihnar tethun pudhe apply
+        document.write(result2);
+
+
+
+
+
+        document.write("<hr>")
+        document.write("<h3>From()</h3>")
+
+        // var rushi = Array.from("Rushikesh");
+
+        // document.writeln(rushi);
+
+
+        var aru = ["HTML", "Java", "Css", "c"];
+
+        var Arrayfrom = Array.from(aru);
+
+        document.write(Arrayfrom + "<br>");
+
+        // var func = function(){
+        //     document.write(Array.from(arguments));
+        // }
+
+        // func("HTML","Java","Css","c" );
+        // document.write();
+
+
+        
+
+        document.write("<hr>")
+
+        document.write("<h3>Filter()</h3>") //
+
+        var nums = [10, 52, 31, 41, 9, 19, 27];
+
+        function check(value) {
+            return value > 30;
+        }
+        document.write(nums.filter(check))
+
+
+
+
+        document.write("<hr>")
+
+        document.write("<h3>Find()</h3>") //array mdhil sarvat 1st vali greater value find krte
+
+
+        var findArry = nums.find(x => x < 30);
+
+        document.write(findArry);
+
+
+
+
+        document.write("<hr>")
+
+
+        document.write("<h3>FindIndex()</h3>") //array madhil value kontya position chi condition fulfill krte ti position diste.
+
+        var num1 = [43, 52, 44, 26, 21];
+
+        var FindIndexarray = num1.findIndex(x => x < 30);
+
+        document.writeln(FindIndexarray);
+
+
+
+
+
+
+        document.write("<hr>")
+        document.write("<h3>ForEach()</h3>")
+
+        var num2 = [43, 52, 44, 26, 21];
+        var value = 0;
+
+        num2.forEach(function (rushi) {
+            document.writeln(rushi + 2);
+        })
+
+        var num3 = ["kolhapur", "pune", "sangli"];
+
+        //  num3.forEach(function(shub){
+        //     document.write(shub + "Hello")
+        //  })
+
+        //     num3.forEach(myFunction);
+
+        //     function myFunction(item,index,arr){
+
+        //     arr[3] = "hello" + item;
+        // }
+        // document.write( num3);
+
+
+
+        var myPoint = [3, 4, 5, 6];
+
+        myPoint.forEach(function (ArrValue, index) {
+
+            //   console.log(index+" "+(ArrValue+100));
+            
+            console.log(arr5[index] + 100);
+        })
+
+
+
+
+
+
+        document.write("<hr>")
+        document.write("<h3>includes()</h3>")
+
+        var num5 = ["C++", "Java", "HTML", "JavaScript"]; //Aray mdhil value check krte jr asel tr true .nasel tr false.
+
+        document.write(num5.includes("Java"));
+
+
+
+
+        document.write("<hr>");
+        document.write("<h3>indexOf()</h3>");
+
+        var num6 = ["kolhapur", "pune", "sangli", "satara", "pune"]; //array mdhe jr repet asel name tr position ghychi.
+
+        document.write(num6.indexOf("pune", 2) + "<br>");
+
+        document.write(num6.indexOf("pune") + "<br>");
+
+        document.write(num6.indexOf("kotoli")); //arry mdhe nasel tr -1 ans.
+
+
+
+
+        document.write("<hr>");
+        document.write("<h3>isArray()</h3>");
+
+        var num7 = [43, 52, 44, 26, 21];
+
+        document.writeln(Array.isArray(5, 7, 8) + "<br>"); //imp - (Array.isArray());
+
+        document.write(Array.isArray(num6));
+
+
+
+
+
+        document.write("<hr>");
+        document.write("<h3>join()</h3>");
+
+        var num8 = ["kolhapur", "pune", "sangli", "satara"]; //array mdhil value madhe-seperator pass krych
+
+        document.write(num8.join(" - "));
+
+
+
+
+        document.write("<hr>");
+        document.write("<h3>keys()</h3>");
+
+        var num9 = ["kolhapur", "pune", "sangli", "satara"];
+
+        document.write(num9.keys("pune") + "<br>");
+
+
+
+        var rushi = num9.keys();
+
+        for (value of rushi) {
+            document.writeln(value);
+        }
+
+
+
+
+        document.write("<hr>");
+        document.write("<h3>lastIndexOf()</h3>"); // array mdhe kiti position la ahe te dakhvte..
+
+        var num10 = ["kolhapur", "pune", "sangli", "satara"];
+
+        document.write(num10.lastIndexOf("satara"));
+
+
+
+
+
+        document.write("<hr>");
+        document.write("<h3>map()</h3>");
+
+        var rush1 = [2, 3, 4, 5, 6];
+
+        var maparray = rush1.map((x => x * 2));
+
+        document.write(maparray);
+
+
+
+        document.write("<hr>");
+        document.write("<h3>of()</h3>");
+
+        document.write(Array.of(2, 3, 4, "hello", 5));
+
+        console.log(Array.of(2, 3, 4, 5));
+
+
+
+
+        document.write("<hr>");
+        document.write("<h3>push()</h3>"); //element add hotat but add hotana last la hotat.
+
+        var rush2 = [5, 8, 9, 6];
+        rush2.push(2);
+        document.write(rush2 + "<br>");
+
+
+
+
+
+        document.write("<hr>");
+        document.write("<h3>pop()</h3>");
+
+
+        document.write(rush2.pop()); //element mdhil last cha array remove hoto..
+
+
+
+
+
+        document.write("<hr>");
+        document.write("<h3>reverse()</h3>"); //reverse order ni disply hote
+
+        var rush3 = ["kolhapur", "pune", "sangli", "satara"];
+
+        document.write(rush3.reverse());
+
+
+
+
+
+
+        document.write("<hr>");
+        document.write("<h3>reduce()</h3>"); //imp 1- accumulator, 2- currentvalue.
+
+        // syntax - Element.reduce(function(accumulator,currentValue){
+        //     return accumulator+currentValue
+        // })
+
+
+        var rush4 = [4, 7, 9, 2]; //all array element chi add,sub ,mul,div etc hote
+
+        // accumulator madhe store krte addition.......
+
+        var a = rush4.reduce(function (accumulator, currentValue) {
+            return accumulator + currentValue;
+        })
+        document.write(a + "<br>");
+
+        var rush5 = ["kolhapur ", "pune ", "sangli ", "satara "];
+
+        var r = rush5.reduce(function (accumulator, currentValue) {
+            return accumulator + currentValue;
+        })
+        document.writeln(r);
+
+
+
+
+        let arr = [5, 5, 8, 2];
+
+        let sum = arr.reduce((accu, curr, index, array) => {
+
+            debugger
+            let aver = accu += curr;
+
+            if (index === array.length - 1) {
+
+                return aver / array.length;
+            }
+            return aver;
+        })
+
+        console.log(sum);
+
+        // 5 + 5 = 10/4 = 2.5 
+        // 2.5 + 2 =10.5/4= 2.625   2= current value ....10.5 = accumulator ...4=lenght
+
+
+
+
+        document.write("<hr>");
+        document.write("<h3>some()</h3>"); //yek jri mothi asel tr true ..all lahan asel tr false
+
+        var rush6 = [5, 7, 54, 20];
+
+        function test(rushi) {
+            return rushi > 50;
+        }
+        var result = rush6.some(test);
+        document.write(result);
+
+
+
+
+        document.write("<hr>");
+        document.write("<h3>shift()</h3>"); // array mdhlis 1st element la remove krun show krt
+
+
+        var rush7 = [5, 7, 54, 20];
+
+        document.write(rush7.shift());
+
+
+
+        document.write("<hr>");
+        document.write("<h3>slice()</h3>"); //array element remove hotat..position vrti start and and positin  depends...
+
+        var rush8 = [4, 5, 7, 8, 9, 2, 3, 4];
+
+        var slicearray = rush8.slice(4, 7);
+
+        document.write(slicearray + "<br>");
+
+        var rus = ["kolhapur", "pune", "sangli", "satara", "nagpur", "beed"];
+
+        var rrr = rus.slice(1, 4); //forth position chi value ghet nahi..
+
+        document.write(rrr);
+
+
+
+
+        document.write("<hr>");
+        document.write("<h3>sort()</h3>"); //assending order
+
+        var akki = [9, 6, 7, 8, 3, 5];
+        var akki2 = ["HTML", "CSS", "Java", "BootStrap", "Python", "C++"];
+
+        document.writeln(akki.sort() + "<br>");
+
+        document.writeln(akki2.sort() + "<br>");
+
+
+
+
+        var akki3 = [9, 6, 7, 8, 3, 5]; //min no check kryala use..
+
+        var result5 = akki3.sort();
+
+        document.write("min no :" + result5[0] + "<br>");
+
+
+        document.write("maximum no :" + result5[result5.length - 1]);
+
+
+
+
+        document.write("<hr>");
+        document.write("<h3>splice()</h3>"); ///////(  start , delete ,....element)
+
+
+        var months = ["jan", "feb", "mar", "apr", "may", "aug",];
+
+        var addmonths = months.splice(4, 0, "june"); //
+
+        document.writeln(months + "<br>");
+
+
+        var addmonths = months.splice(2, 2, "jully"); //position 2 pasun 2 -name delete and yek add..
+
+        document.write(months);
+
+
+
+        document.write("<hr>");
+        document.write("<h3>toLocalString()</h3>");
+
+
+        var mon = ["jan", "feb", "mar", "apr", "may", "aug",];
+
+        var rsr = mon.toLocaleString();
+
+        document.writeln(rsr);
+
+        console.log(rsr);
+
+        var mon2 = [a, 1, new Date('8 jan 1998 15:25:00 UTC')];
+        var rsr = mon2.toLocaleString('en', { timeZone: "UTC" });
+        console.log(rsr);
+
+
+
+
+        document.write("<hr>");
+        document.write("<h3>toString()</h3>");
+
+
+        var mon = ["jan", "feb", "mar", "apr", "may", "aug",];
+
+        var rsp = mon.toString();
+
+        document.writeln(rsp);
+
+
+
+
+        document.write("<hr>");
+        document.write("<h3>unshift()</h3>"); //suruvatila add hote ...
+
+        var num8 = [7, 9, 5, 6, 4];
+
+        var num9 = num8.unshift(8, 7);
+
+        document.writeln(num8);
+
+
+
+        document.write("<hr>");
+        document.write("<h3>values()</h3>");
+
+        var mon = ["jan", "feb", "mar", "apr", "may", "aug",];
+
+        var valuesadd = mon.values();
+
+        document.writeln(valuesadd.next().value);
+        document.writeln(valuesadd.next().value);
+        document.writeln(valuesadd.next().value);
+
+
+
+
+        // for (value of valuesadd){
+        //     document.writeln(value);
+        // }
+
+        // console.log(valuesadd);
+
+
+
+
+
+
+
+    </script>
+</body>

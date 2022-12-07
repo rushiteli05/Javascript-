@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duplicate</title>
+</head>
+
+<body>
+    <script>
+
+        //ex 1 .
+        var x = [2, 3, 4, 5, 2, 3];
+
+        var t = new Set(x);
+
+        console.log(t)
+
+
+        //ex 2..
+
+        let char = ['a', 'b', 'c', 'a']
+
+        let uniq = [...new Set(char)];
+
+        console.log(uniq);
+
+
+
+        //ex 3
+
+        let array = [1, 2, 3, 4, 5, 6, 2, 3, 4];
+
+        let aru = array.filter((ele, index) => {
+
+            //return array.indexOf(ele)!== index    //je duplicate ahe te dakhvte
+
+            return array.indexOf(ele) === index
+
+        })
+
+        console.log(aru);
+
+
+
+
+        //ex 4
+
+        const fruits = [
+            "apple", "lemon", "orange", "banana", "apple", "orange"
+        ];
+
+        let adi = new Set(fruits);   //Array.from(new Set(fruits))
+
+
+
+        console.log(Array.from(adi)); //convert into array
+
+
+
+
+        // ex for each method...
+
+        unique = [];
+
+        fruits.forEach((ele) => {
+
+            if (!unique.includes(ele)) {
+                unique.push(ele);
+            }
+
+        })
+
+        console.log(unique);
+
+
+        //reduce method
+
+
+
+        let data = {name:"shubham"};
+
+        console.log(delete data)
+                       
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

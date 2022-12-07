@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Example Bitwise Operator</title>
+</head>
+<body>
+
+   <script type="text/javascript">
+   	 
+   	 var x = 5;
+   	 var y = 9;
+   	 var z = 2;
+
+     document.write("<h3>Bitwise Operator</h3>");
+
+   	 document.write("Bitwise x & y:" +(x & y)); //AND
+
+    document.write("<br>")
+
+   	  document.write("Bitwise x | y:" + (x | y)); //OR
+
+   	  document.write("<br>")
+
+   	  document.write("Bitwise x ^ y:" + (x ^ y)); //XOR
+
+   	  document.write("<br>")
+
+   	    document.write("Bitwise ~x:" + (~x)); //NOT
+
+   	    document.write("<br>")
+
+   	   document.write("Bitwise Left Shift x << z: " + (x << z)); //Left Shift = x*(2^y)=5*(2^2)
+
+        document.write("<br>")
+
+
+      document.write("Bitwise Right Shift x >> z: " + (x >> z)); //Right Shift =x/(2^y)=5/(2*2)
+
+         document.write("<br>")
+
+
+      document.write("Bitwise Right Shift with zero x >>> z: " + (x >>> z)); //Right Shift With Zero
+
+</script>
+
+
+<script type="text/javascript">
+	
+
+   	 var x = true;
+   	 var y = false;
+   	 
+
+     document.write("<h3>logical Operator</h3>");
+
+     if(x && x){
+     	document.write("stement is true =>(x&y)"); //logical AND 2 value mdhel yek jri value false asel tr ans false
+     }
+      document.write("<br>")
+
+      if(x || y){
+     	document.write("stement is true =>(x||y)"); //logical OR  2 value madhel yek value jri true asel tr ans true.
+     }
+     document.write("<br>")
+     if(!y){
+     	document.write("stement is true =>(!y)"); //value false asel tr true ulat hote.
+     }
+
+
+</script>
+</body>
+</html>

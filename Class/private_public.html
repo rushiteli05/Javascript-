@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private_Public</title>
+</head>
+<body>
+    <script>
+
+        class person{
+            #name  =" "  
+            constructor(n){   
+                        //public direct object sobat call hote...
+                this.#name=n;
+            }
+
+            #fname(){                        //private method
+                console.log(this.#name);  //using # we can use private method..private method define in the scope only..
+            }
+
+            pubname(){
+                this.#fname();
+
+            }
+        }
+
+        let fullname = new person("Aditya");
+
+        // console.log(fullname.name);
+
+        // console.log(fullname.fname());
+
+        console.log(fullname.pubname());
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <p id="rushi" class="mayu" style ="border:1px solid black;" onClick="show">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum accusamus ab corrupti commodi quas
+        atque blanditiis quia eligendi beatae nesciunt obcaecati quidem nam assumenda delectus voluptatum maxime,
+        voluptatibus consectetur? Odio?</p>
+    <p class="teli"></p>
+
+
+    <ul class = 'list'>
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+    </ul>
+
+
+<script>
+
+    //access element by ID
+
+    var a = document.getElementById("rushi").innerHTML;
+
+    document.write(a);
+
+
+
+    document.write("<hr>")
+
+    // access element by class.
+
+    var b = document.getElementsByClassName("teli")[0].innerHTML;
+
+    document.writeln(b);
+
+
+
+
+
+    document.write("<hr>")
+
+    // access element by tag.  
+
+    var tag = document.getElementsByTagName("p");
+
+    document.write(tag);
+    console.log(tag);
+
+
+
+
+    document.write("<hr>")
+
+    // access 1st element.  
+
+    var c = document.querySelector("p").innerHTML;
+
+    document.writeln(c);
+
+
+
+
+    document.write("<hr>")
+
+    // add new  chaild on body.  
+
+
+    var para = document.createElement("p");
+
+    var textnode = document.createTextNode("This is a new para");
+
+    para.appendChild(textnode);
+
+    console.log(para);
+
+
+    document.body.appendChild(para);
+
+
+
+
+    
+
+    document.write("<hr>")
+
+
+    //getAttribute
+
+let element1 = document.getElementById("rushi").getAttribute("style");
+
+ let element2 = document.getElementById("rushi").getAttribute;
+
+
+// attributes  -- name & value
+
+// let element2 = document.getElementById("rushi").attributes[1];
+
+// let element2 = document.getElementById("rushi").attributes[1].name;
+
+// let element2 = document.getElementById("rushi").attributes[1].value;
+
+document.writeln(element2);
+
+
+// let element3 = document.getElementById("rushi").innerText = "wowowowow";
+
+// document.writeln(element3)
+
+
+
+//query selector ...  
+
+let rushi = document.querySelector(".list").innerHTML = "Saheb" // jo 1st asel tyla select karto
+
+console.log(rushi);
+
+
+
+let rushi1 = document.querySelectorAll(".list") // jo 1st asel tyla select karto
+
+console.log(rushi1);
+
+
+
+
+
+
+//style on css
+
+
+document.querySelector("#rushi").style.backgroundColor= "black";
+
+
+document.querySelector("#rushi").style.color= "white";
+
+
+
+
+
+
+document.querySelector("one").addEventListener('click',function(){
+
+
+    alert('Hello rushi sir')
+
+
+})
+
+
+
+
+
+
+
+
+</script>
+<button id="one">click</button>
+
+
+</body>
+
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="one">click</button>
+    <p id="para">Lorem ipsum dolor sit amet.</p>
+    <script>
+
+        document.getElementById("one").addEventListener("click", function () {
+
+
+            document.getElementById("para").style.background = 'lightgreen';
+
+
+        })
+
+    </script>
+</body>
+
+</html>

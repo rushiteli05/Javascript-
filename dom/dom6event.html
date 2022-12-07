@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+
+<body>
+
+    <button id="btn" onclick="btnclick()">Click Me.!</button>
+
+
+    <script>
+
+        //onclick...
+
+        function btnclick() {
+            alert("Button Was Click")
+        }
+
+        //    or
+
+        // let btn = document.getElementById("btn");
+
+        // btn.addEventListener("click",btnclick);  ( event name ,function name)
+
+    </script>
+
+
+
+    <script>
+
+        // 1)mouseover..   2)mouse out.. 
+
+        let btn = document.getElementById("btn");
+
+        btn.addEventListener("mouseover", function () {
+            alert("Mouse over on it");
+        })
+
+        btn.addEventListener("mouseout", function () {
+            prompt("Mouse out on it");
+        })
+
+
+    </script>
+
+
+    <script>
+        //Remove Event Listener..
+
+
+        function click1() {
+            console.log("click 1 is activated");
+        }
+
+        function click2() {
+            console.log("click 2 is activated");
+        }
+
+        btn.addEventListener("click", click1);
+
+        btn.addEventListener("click", click2);
+
+        btn.removeEventListener('click', click2)
+
+    </script>
+
+
+
+
+    <img id ="img1" width="500" src="https://www.pexels.com/photo/yellow-and-brown-concrete-house-near-rocky-mountain-13691334/">
+
+    <script>
+     
+
+     window.addEventListener("DOMContentLoaded",function(){
+        console.log("Loaded img");
+     })
+
+     
+     window.addEventListener("load",function(){
+        console.log(" fully Loaded img");
+     })
+
+     //or
+
+    //  let img1 = document.getElementById("img1");
+
+    //  img1.addEventListener("load",function(){
+    //     console.log("fully loaded img")
+    //  })
+
+
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Inline Style.</title>
+</head>
+<style>
+    #btn{
+        background-color: aqua;
+        color: black;
+    }
+    #box{
+        background-color: blueviolet;
+    }
+    .class{
+        background: yellow;
+        color: black
+
+    };
+    .dim{
+        border: 1px solid red;
+        padding: 100px;
+
+    }
+</style>
+
+<body>
+
+    <button id="btn" style="color:blueviolet">Click</button>
+    <script>
+
+        // Change Inline Style.
+
+        var rushi = document.getElementById("btn");
+
+        rushi.style.cssText += "background-color:black; border:white";  //varti jeva style deil teva te vrchi 
+        
+        //overwrite krate; += deil teva te donhi value gheil..
+
+        //  rushi.style.background="blue";
+
+        //or
+
+        // rushi.setAttribute("style","background-color:black; color:white")
+
+
+
+    </script>
+
+
+
+
+    <button id="btn" style="color:blue">Click1</button>
+
+    <!-- <p>jr value ethe gate keli asel tr varti value overwrite houn he vlue consider hote..</p> -->
+    <script>
+
+        var dsp = document.getElementById("btn");
+
+        var css = getComputedStyle(btn);
+
+        console.log(css.color)  //color chi value get krto....
+    </script>
+
+
+<div id="box" class="color">
+    <p>This is Rushikesh</p>
+</div>
+<script>
+
+    let saheb = document.getElementById("box");
+
+    // saheb.className += " dim"; //class add krto..
+
+    // console.log(saheb);
+
+    // console.log(saheb.classList); //class show karte..
+
+
+    // for(let css of saheb.classList){    //class show kru shkato 
+    //     console.log(css);
+    // }
+
+    saheb.classList.add("dada");  //new class add kru shkto...
+
+    saheb.classList.remove("dada");  //remove 
+
+    saheb.classList.replace("color","dada"); //(remove kryche ahe te, add kryche ahe te);
+
+    saheb.classList.toggle("dada");  //class asel tr remove krte..nasel tr add krte..
+
+    let result = saheb.classList.contains("dada"); //value asel tr true ..else false
+
+    console.log(result);
+
+
+
+</script>
+
+
+
+
+<script>
+// Get Width and Height of Element...
+
+
+    let rush = document.getElementById("box");
+
+    let width = rush.offsetWidth; //border include krun
+
+    let height = rush.offsetHeight;  //border include krun..
+
+    console.log(width);
+
+    console.log(height);
+
+
+    let width1 = rush.clientWidth; //border sub krun
+
+    let height1 = rush.clientHeight;  //border sub krun..
+
+    console.log(width1);
+
+    console.log(height1);
+
+
+</script>
+
+
+
+</body>
+
+</html>

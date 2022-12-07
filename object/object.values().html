@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object.values()</title>
+</head>
+
+<body>
+
+    <script>
+
+
+        const person = {
+            firstname: "aditya",
+            lastname: "pawar",
+            age: 25,
+        };
+
+        const profile = Object.values(person);
+
+        console.log(profile);    //op shows in array..
+
+
+
+        //for ....in  
+
+        const display ={
+            name:"Parsad",
+            lname:"Gavli",
+            age:24
+        };
+
+        for(const values in display){
+
+            if(display.hasOwnProperty(values)){
+
+                const value = display[values];
+
+                console.log(value)
+            }
+        }
+
+
+
+
+    </script>
+
+    <script>
+
+
+
+            function  rushi1 (){
+
+                function rushi2(){
+
+                    return "My function 2 is ok";
+                };
+               return rushi2();
+
+            };
+
+            console.log(rushi1);
+
+
+
+    </script>
+
+</body>
+
+</html>

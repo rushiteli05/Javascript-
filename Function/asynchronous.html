@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>asynchronous</title>
+</head>
+
+<body>
+    <script>
+
+        //synchronous... -- yek run zal ki next run hote..
+
+
+
+
+        const rushi2 = () => {
+            console.log('Function 2 is starting');
+
+           
+        }
+
+
+
+        const rushi1 = () => {
+            console.log("Function 1 is Starting");
+
+            rushi2();
+
+            console.log('function 1 is ending')
+
+        }
+        rushi1();
+
+
+        //asynchronous javascript..--at a time la all kru shkato. 
+
+
+         const rushi5 = () => {
+
+            setTimeout(() => {
+                console.log('ending prg 4');
+            }, 2000)
+
+        }
+
+        const rushi4 = () => {
+            console.log("Function 4 is Starting");
+
+            rushi5();
+
+            console.log('function 4 is ending')
+
+        }
+        rushi4();
+
+
+
+
+
+        //call back...
+
+        const datas = [
+            { name: 'rushikesh', age: 25 },
+            { name: 'aditya', age: 26 }
+        ];
+
+
+        function getDates() {
+
+            setTimeout(() => {
+                let output = "";
+                datas.forEach((value, index) => {
+                    output += ` ${value.name},${value.age}`;
+                })
+                console.log(output);
+
+            }, 3000);
+        };
+
+
+        function creatDate(newdate, callback) {
+
+            setTimeout(() => {
+                datas.push(newdate);
+                callback();
+            })
+        };
+
+        creatDate({ name: "prasad", age: 22 }, getDates);
+        
+      
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currying</title>
+</head>
+<body>
+
+    <script>
+
+        //ex 1..
+
+        function getsum(a){
+            return function(b){
+                return function(c){
+                    return function(d){
+                        console.log(a+b+c+d);
+                    }
+                }
+            }
+        };
+
+        getsum(5)(6)(7)(8);
+
+
+        //ex 2 . one line 
+
+
+        const getsum1 = (a) =>(b)=>(c)=>(d)=>(e)=>a*b*c*d*e
+
+        const total = getsum1(5)(5)(5)(5)(5);
+
+        console.log(total)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

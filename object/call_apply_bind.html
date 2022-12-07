@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call,Apply,Bind</title>
+</head>
+
+<body>
+    <script>
+
+
+        function Rushikesh(math, engli, phys, chem) {
+
+            var a = math + engli + phys + chem;
+
+            return a;
+        }
+
+        var b = Rushikesh(80, 60, 90, 70);
+
+        console.log(b);
+
+        function Adity(tm) {
+
+            var v = tm / 400 * 100;
+
+            return v;
+        }
+
+        var m = Adity(b);
+
+        console.log(m);
+
+
+
+
+
+
+
+
+
+        function compare(a, b) {
+            if (a > b) {
+                return 1;
+            }
+            else if (b > a) {
+                return -1;
+            }
+            else {
+                return 0;
+            }
+        }
+
+        let w = compare(7, 7);
+
+        console.log(w);
+
+
+
+
+
+        var Adu = {
+            name: " Advika ",
+            lname: "Teli",
+            address: {
+                villege: "Kotoli",
+                city: "Kolhaour",
+                document: {
+                    email: "aduteli@070",
+                    adhar: 53635353,
+                }
+            }
+        };
+
+        console.log(Adu.address);
+
+
+
+
+
+
+
+
+
+        // call Method ..
+
+
+        var userName = {
+            name: "Rushikesh",
+            age: 25,
+            printDetails: function (count, state) {
+                console.log(this.age, this.name + count + state)
+
+            }
+        }
+        userName.printDetails(" India ", " Maharashtra");
+
+        var userName2 = {
+            name: "Mayuresh",
+            age: 29,
+        };
+        userName.printDetails.call(userName2, " India ", " Maharashtra");
+
+
+
+
+
+
+
+
+        
+        // Apply Method..
+
+        userName.printDetails.apply(userName2, [" India ", " Maharashtra"]);
+
+
+        // Bind Method...
+        var newfun = userName.printDetails.bind(userName, " india", " Maharashtra")
+        newfun();
+
+
+
+
+        // call method ....
+
+        const youtuber1 = {
+            name: "Aditya",
+            age: 25,
+            content: "Programmer",
+            // feature:function(rating,support){
+            //     console.log(this.age,this.name,this.content,rating,support);
+            // }
+        }
+        function rushi() {
+            console.log(this.age, this.name);
+
+        }
+        // youtuber1.feature(8,"Subscripe Channel");
+
+
+        const youtuber2 = {
+            name: "Parsad",
+            age: 22,
+            content: "Programmer & Vlog",
+        }
+
+
+        rushi.call(youtuber2);
+        rushi.call(youtuber1);
+        // youtuber1.call(youtuber2,5,"Subscripe Channel"); --call method takes arguments separately..
+
+
+
+        //Apply Method..
+
+        let maxArr = Math.max.apply("", [2, 4, 6, 8, 9]);
+
+        console.log(maxArr);
+
+
+        let maaArr = {
+            name: "Ashish",
+            content: "Prog",
+            feature: function (rating, star) {
+                console.log(this.name, this.content, rating, star);
+            }
+        }
+        maaArr.feature([5, "two"]);
+        let maaArr2 = {
+            name: "Sagar",
+            content: "Civil",
+
+        }
+
+        maaArr.feature.apply(maaArr2, [5, "two"]); //apply () method takes argument as an array[];
+
+
+
+
+        //Bind Method..
+
+
+
+        let maaArr3 = {
+            name: "Ashish",
+            content: "Prog",
+            feature: function (rating, star) {
+                console.log(this.name, this.content, rating, star);
+            }
+        }
+        maaArr.feature(5, "two");
+        let maaArr4 = {
+            name: "Sagar",
+            content: "Civil",
+
+        }
+
+        let funRus = maaArr3.feature.bind(maaArr4, 5, "two");
+
+        funRus();
+
+
+
+
+
+
+        const youtuber4 = {
+            name: "Aditya",
+            age: 25,
+            content: "Programmer"
+        }
+
+        const youtuber5 = {
+            name: "Satish",
+            age: 29,
+            content: "Civil"
+        }
+
+        const youtuber6 = {
+            name: "Shubham",
+            age: 26,
+            content: "Mech"
+        }
+
+        function featureR(rating,subscripe){
+            console.log(this.name,this.age,this.content,rating,subscripe);
+        }
+
+        let Rushi1 = featureR.bind(youtuber4,5,'channel');   Rushi1();
+
+        let Rushi2 = featureR.bind(youtuber5,4,'channel');   Rushi2();
+
+        let Rushi3 = featureR.bind(youtuber6,8,'channel');   Rushi3();
+
+
+    </script>
+</body>
+
+</html>

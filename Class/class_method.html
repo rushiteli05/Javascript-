@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+</head>
+
+<body>
+
+    <script>
+
+        //syntex...
+
+        class person {
+
+            constructor(fname, lname) {               //constructor method
+
+                this.fname = fname;
+                this.lname = lname;
+            }
+
+            sayHi() {                                  // Prototype Method
+                console.log("Hi....Dear");
+            }
+
+
+            static sayHello() {                         //static Method...La class ni Call krto...IMP
+                console.log("Hello...")
+            }
+
+            static property = "Something.....";
+
+        }
+
+        let fullName = new person("Rushikesh", "Teli");
+
+        fullName.sayHi();
+
+        person.sayHello();   // call class ni krto static method....
+
+        console.log(person.property);  //static
+
+        console.log(fullName);
+
+
+
+
+    </script>
+
+</body>
+
+</html>

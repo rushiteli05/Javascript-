@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementById</title>
+</head>
+
+<body>
+
+    <ul>
+        <li class="cl1">list 1</li>
+        <li id="first">list 2</li>
+        <li class="cl2">list 3</li>
+        <li id="tr">list 4</li>
+    </ul>
+
+
+    <h2>heading1</h2>
+    <div id="div1">
+        <p class="intro">paragraph 1</p>
+        <h2>heading 2</h2>
+        <p>paragraph 2</p>
+        <h2 class="intro">heading 3</h2>
+        <p class="intro">paragraph 3</p>
+    </div>
+
+
+
+
+
+    <script>
+        //id..
+
+        var elm = document.getElementById("first").innerHTML = "<p>Hello Sir</p>"
+
+        console.log(elm);
+
+        let rt = document.getElementById("tr").innerHTML="<h1>Rushikesh</h1>"
+
+        console.log(rt)
+    </script>
+
+
+    <script>
+        //class..
+
+        var elm = document.getElementsByClassName("cl1");
+
+        for (let i = 0; i < elm.length; i++) {
+
+            elm[i].innerHTML = "<p>Saheb (change the class name)</p>";
+
+        }
+
+
+        let elee = document.getElementsByClassName("cl2");
+
+        for( i = 0; i <elee.length ; i ++){
+        elee[i].innerHTML = "change by class "}
+    </script>
+
+
+
+    <script>
+        //tag..
+
+        var elem = document.getElementsByTagName("h2");
+
+        for (let i = 0; i < elem.length; i++) {
+            elem[i].innerHTML = "hello";
+        };
+
+
+
+
+        var div1 = document.getElementById("div1");
+
+        var elem1 = div1.getElementsByTagName("h2");
+
+        for (i = 0; i < elem1.length; i++) {
+            elem1[i].innerHTML = "DADA"
+        }
+    </script>
+
+
+
+    <script>
+
+        // querySelector -- je 1 st asel tevh select krel..tych ch op deil..
+
+        var que = document.querySelector("p.intro").innerHTML = "Rushi"; //tag che name write karn imp..
+
+        console.log(que);
+
+
+
+
+        // querySelectorAll....sagale select hotat...
+
+        var que1 = document.querySelectorAll("p.intro");
+
+        // console.log(que1);
+
+        for (i = 0; i < que1.length; i++) {
+            que1[i].innerHTML = "Mayuresh";
+        }
+    </script>
+
+
+</body>
+
+</html>

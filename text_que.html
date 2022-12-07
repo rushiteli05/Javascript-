@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test..</title>
+</head>
+
+<body>
+
+    <script>
+
+
+        class Car {
+            constructor(brand) {
+                this.carname = brand;
+            }
+            get cnam() {
+                return this.carname;
+            }
+            set cnam(x) {
+                this.carname = x;
+            }
+        }
+
+        let myCar = new Car("Ford");
+
+        console.log(myCar);
+
+
+
+        //ques 4
+
+        class no {
+            constructor(a) {
+                this.a = 20;
+            }
+            get no1() {
+                return a;
+            }
+            set no1(x) {
+                let a = x
+            }
+        };
+
+        let myno = new no();
+
+        console.log(myno);
+
+
+        // 1.
+
+        var x = 3;
+
+        var foo = {
+            x: 2,
+            baz: {
+                x: 1,
+                bar: function () {
+                    return this.x
+                }
+            }
+        }
+
+        var go = foo.baz.bar;
+        // alert(go());
+        // alert(foo.baz.bar());     // o/p -- 3,1
+
+
+
+        //2
+
+        var x1 = 0;
+
+        function fo1() {
+            x++;
+            this.x = x;
+            return fo1;
+        }
+        var barr = new new fo1;
+        console.log(barr.x1)     //o/p -- undefined.
+
+
+        // 4
+
+        var t = 1;
+
+        if (function f() { }) {
+            t += typeof f;
+        }
+        console.log(t);
+
+        //o/p -- 1 undefined
+
+
+        // 5
+
+        var y = 1;
+        var output = (function () {
+            delete y;
+            return y;
+        })
+        console.log(output)        //none.
+
+
+        // 6 
+
+        var salary = "1000$";
+        (function () {
+
+            console.log("Original salary was " + salary);
+
+            var salary = "5000$";
+
+            console.log("My new salary " + salary)
+        })
+            ();     // undefined , 5000$
+
+
+        // 7
+
+        var bar2 = true;
+
+        console.log(bar2 + 0);
+        console.log(bar2 + "xyz");
+        console.log(bar2 + true);
+        console.log(bar2 + false);
+
+        //op -- 1,"truexyz",2,1
+
+
+
+
+        // 8
+
+        var z = 2,
+
+            w = z = typeof w;
+
+        console.log(w)
+        //o/p -- undefined.
+
+
+
+        // 9
+
+        // (function(a){
+        //     return (function(){
+        //         console.log(a);
+        //         a=6;
+        //     })();
+        // })(21)
+        // none of the above..
+
+
+        // 10..
+
+        var r = 1;
+        var a = 0;
+
+        while (r <= 3) {
+            r++;
+            a += r * 2;
+            console.log(a)
+        };
+
+        //o/p --  4 10 18
+
+
+
+
+
+        //....................//...................//............//..................//
+
+        //Programming-
+
+        // 1) duplicate.
+
+
+        let arry = [2, 3, 4, 5, 2, 3, 4];
+
+        let result = new Set(arry);
+
+
+
+        console.log(Array.from(result))   //convert into Array.
+
+
+
+        // let arry = [2, 3, 4, 5, 2, 3, 4];
+
+        // let result = [...new Set(arry)]
+
+
+        // console.log(result);
+
+
+        result = [];
+
+        arry.forEach((ele) => {
+            if (!result.includes(ele)) {
+                result.push(ele)
+            }
+        })
+
+        console.log(result)
+
+
+
+        // 3) function converts into object.
+        
+        // const obj1 = {red:"rushi",blue:"mayu"}
+
+        // console.log(Object.entries(obj1));
+
+
+        function key(obj1){
+            console.log(Object.entries(obj1));
+        }
+
+        const obj1 = {red:"rushi",blue:"mayu"}
+
+        key(obj1);
+
+
+
+
+
+        // 4)
+
+        var func = function(){
+
+            var q = 2;
+            var setQ = function(newVar){
+                q=newVar;
+            }
+
+            var getQ  = function(){
+                return q;
+            }
+            return{
+                setQ:setQ,
+                getQ:getQ,
+            }
+        }
+
+        var objj=func();
+
+        console.log(objj.setQ(20));
+        console.log(objj.getQ());
+
+
+
+        // 5)
+
+
+        array1 = [2,3,4,5];
+
+        adi = [];
+
+        
+        array1.forEach((pashu)=>{
+            if(!adi.includes(pashu)){
+                adi.push(pashu)
+            }
+        });
+
+        console.log(adi);
+
+
+        //function
+
+
+        function fulln(id,name){
+            this.id=id;
+            this.name=name;
+        };
+
+        function firstn (id,name,lnam){
+            fulln.call(this,id,name,lnam);
+            this.lnam=lnam
+        }
+
+        function lname (id,name,age){
+            fulln.call(this,id,name,age);
+            this.age=age;
+            
+
+        }
+
+        let fullname = new firstn(2,"ruhikesh","teli")
+
+        let lastname = new lname(5,"aditya",55)
+
+       
+        console.log( Object.values(fullname));
+
+         console.log(Object.values(lastname))
+
+        
+
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+        
+        
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> example of datatypes</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	var x = "hello"; //- string variable.
+
+	var num = 1000;  //- Number variable.
+
+	var yes = true; // -boolen variable with value true/1
+	var no = false; //- boolen variable with value false/0
+
+	var y;
+	document.write(y); //-undifined value.
+
+	var z = '';
+	document.write(z); //-null variable 
+	
+</script>
+
+
+
+
+
+
+
+<h3>Concepts of Primitive Datatypes</h3>
+
+<!-- concept of variable for number and string -->
+
+<script type="text/javascript">
+	var a = 15 + "Hello";
+	var a = "Hello" + 15;
+	var a = 50 + 50 + "Hello"; // - 1st addition zali and string nantr = 100Hello
+	var a ="Hello" + 50 + 50; // - string mule samorchi addition pN string ch rahili=Hello5050
+
+	document.write(a);
+	document.write("<br>");
+
+
+      // concept of variable for Quotes with string.
+
+	  document.write("<hr>");
+	var str1 = "his name is 'rushi'"; // - string mdhe jr baher ""cot asel tr aat mdhe ''single cot.
+
+	var str2 = 'his name is "rushi"';
+
+	document.write(str1+str2);
+
+	document.write("<br>");
+
+
+
+	document.write("<hr>");
+
+	//concept of variable for boolens.
+
+	var temp1 = 1;
+	var temp2 = 2;
+	var temp3 = 1;
+	if(temp1 == temp2){
+		document.write("true");
+	}else{
+		document.write("false");
+	}
+
+
+	document.write("<br>");
+
+
+	//concept of variable for null and undefinds.
+
+	var temp4 = 1;
+	var temp5 = 1;
+	
+	if(temp4 ===  temp5){
+		document.write("true");
+	}else{
+		document.write("false");
+	}
+	document.write("<hr>");
+
+
+ </script>
+
+
+
+
+
+
+
+
+
+ <h3>non primitive data type<h3>
+
+ 	<!-- below poertion describes about variable array -->
+ 	
+
+
+ 	<script type="text/javascript">
+ 			document.write("<h3>Example of Array<h3>");
+
+ 		var car = ["Ertiga","XUV","Verna"];  //arry starts from 0 th position.
+
+ 		document.write(car[0]);
+ 		document.write(car[1]);
+ 		document.write(car[3]); //position madhe nahi so undefined value ali.
+ 		
+ </script>
+
+
+
+
+
+
+
+
+
+<!-- below poertion describes about variable object -->
+
+ <script type="text/javascript">
+
+ 	document.write("<h3>Example of Object<h3>");
+
+ 	var person = {
+ 		fname: "rushi",
+ 		lname:"teli",
+ 		age: 26,
+ 		eyecolor: "brown"
+ 	};
+ 	document.write(person.fname , "  with age " ,person.age , " having eyecolor as " , person.eyecolor);
+ 	
+ </script>
+
+</body>
+</html>

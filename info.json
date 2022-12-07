@@ -1,0 +1,32 @@
+{
+    "name":"Rushikesh",
+    "age":25,
+    "ia_student":true,
+    "passport_no": null,
+    "p_lang":["c","c++","javascript","java"],
+    "address":{
+        "city":"kolhapur",
+        "state":"maharashtra",
+        "pincode":416230
+    }
+}
+
+
+
+
+{
+    "students":[
+        {
+            "name":"rushikesh",
+            "age":25
+        },
+        {
+            "name":"aditya",
+            "age":23
+        },
+        {
+            "name":"prasad",
+            "age":22
+        }
+    ]
+}

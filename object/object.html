@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        /*creating an object using object Literals*/
+        var person = {
+            fname: "Rushikesh",
+            lname: "Teli",
+            age: 25,
+            eyecolor: "Brown"
+        }
+
+        document.write("Object details of person Object : " + person.fname + " " + person.lname + " "
+            + person.age + "<br>")
+
+
+
+
+
+
+        /* creating an object using new keyword (Instance of an Object)*/
+        var emp = new Object();
+
+        emp.id = 1;
+        emp.name = "Aditya pawar";
+        emp.salary = 20000;
+        document.write("Object details of emp Object : ")
+        for (value in emp) {
+            document.writeln(emp[value] + " ");
+        }
+
+
+
+
+
+        /* Creating an object using object constructor*/
+        document.write("<br>")
+
+        function employee(id, name, salary) {
+            this.id = id;
+            this.name = name;
+            this.salary = salary;
+        }
+        var t = new employee(2, "Shreenath", 40000);
+
+        document.writeln("Object details for employee object : ")
+        for (value in t) {
+            document.writeln(t[value]);
+        }
+    </script>
+
+<hr>
+    <script>
+
+
+
+        document.write("<h3>Example bind()</h3>");
+        document.write("<br>");
+
+        function employee(id, name, salary) {
+            this.id = id;
+            this.name = name;
+            this.salary = salary;
+
+            this.updatesalary = updatesalary;
+            function updatesalary(newsalary) {
+                this.salary = newsalary;
+            }
+        }
+        var r = new employee(2, "Shreenath", 40000);
+
+        document.write("salary of" + r.name + " is : " + r.salary);
+
+        document.write("<br>");
+
+        r.updatesalary(50000);
+
+        document.write("updatesalary of" + r.name + " is : " + r.salary);
+
+    </script>
+
+
+    <script>
+        document.write("<h3>Example assign()</h3>");
+
+        var object1 = {
+            a: 1,
+            b: 2,
+            c: 3
+        }
+        var object2 = {
+            d: 1,
+            e: 2,
+            f: 3
+        }
+
+        var object3 = Object.assign({ c: 5, d: 6 }, object1); // O - nehami - Capital object
+
+        var object4 = Object.assign({ g: 7, h: 8 }, object2)
+
+        console.log(object1, object3)
+        console.log(object2, object4)
+
+
+    </script>
+
+
+
+    <script>
+        document.write("<h3>Example creat()</h3>");
+
+        function fruit() {
+            this.name = "Grapes";
+        }
+        function fun() {
+            fruit.call(this);
+        }
+
+        fun.prototype = Object.create(fruit.prototype);
+
+        const app = new fun();
+        console.log(app);
+
+    </script>
+
+</body>
+
+</html>

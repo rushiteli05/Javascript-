@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metacharacter Symbols</title>
+</head>
+<body>
+    <script>
+
+        let regex = /rushi/;
+        //looks into some metacharacter stmbol.
+
+        regex = /^rus/   //^ = starts with.tya character nusar asel tr ans dete.
+        
+        regex =/hi$/ //$ ends with.
+
+        regex =/r.ush/ //. matches any one character.
+
+        regex =/r*ush/   // matches any o or more character
+
+        regex= /ru?sh?i/  //?after character means that character is optional.
+
+
+        let str = "rushi is rushi";
+
+        let result=regex.exec(str);
+
+        console.log(result);
+
+
+        if(regex.test(str)){
+            console.log(`The string ${str} matches the expression ${regex.source}`);
+
+        }else{
+            console.log(`The string ${str} does not matches the expression ${regex.source}`);
+        }
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

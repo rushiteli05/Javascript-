@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventListener..</title>
+</head>
+
+<body>
+
+
+    <button id="one">On click</button>
+
+    <div id="intro">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque neque voluptatem eius, doloremque
+        debitis
+        vel, hic sequi cum error perspiciatis itaque sunt soluta fugit ullam necessitatibus magnam tenetur non eos?
+    </div>
+    <div id="test">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta repellendus odio asperiores, unde ab
+            velit provident consequuntur illo dolores deleniti?</p>
+        <h3>Rushi teli</h3>
+    </div>
+
+
+
+
+    <script>
+
+        document.getElementById("one").addEventListener("mouseenter", abc);
+
+        function abc() {
+
+            document.getElementById("intro").style.backgroundColor = "yellow";
+        }
+        //mouseenter,click,mpuseleav
+
+        document.getElementById("one").addEventListener('onclick', xyz)
+
+
+        function xyz() {
+
+            document.getElementById("intro").style.border = '1px solid black';
+        };
+
+
+
+
+
+
+
+
+
+
+
+
+        //create method ....1) element 2) textnode 3)comments.
+
+
+        var newelement = document.createElement("h2");
+
+        console.log(newelement);
+
+        var newtext = document.createTextNode("This is text node");
+
+        console.log(newtext);
+
+        var newcomment = document.createComment("this is comment");
+
+        console.log(newcomment);
+
+
+       
+
+
+
+
+
+
+        
+
+        //Append Method -->  
+        
+        //1) appendChaild --> Add kru shkto elements ..add hotana last la add hotat ..
+
+        newelement.appendChild(newtext);
+
+        document.getElementById("test").appendChild(newelement); // last la append hote value last la ch yete
+
+
+
+        // 2)insertBefore.. --> kuthe pn add kru shakto 1st middle or kuthe pan.
+
+        var target = document.getElementById("test");
+
+        target.insertBefore(newelement, target.childNodes[0]);
+
+        console.log(target);
+
+
+        // 3) insertAdjucentelement -->        
+
+
+        var Element1 = document.createElement("h2");
+
+        var text1 = document.createTextNode("insertAdjacentElement");
+
+        Element1.appendChild(text1);
+
+        var target1 = document.getElementById("test");
+
+        target1.insertAdjacentElement("afterbegin", Element1); //beforebegin..
+
+
+
+        // 4)insertAdjacentHTML..
+
+
+        var target2 = document.getElementById("test");
+
+        var text5 = "<h2>This Is Heading..</h2>"
+
+        target2.insertAdjacentHTML("afterbegin", text5); //afterend,beforeend..
+
+
+        //5)insertAdjucentText..
+
+        var target3 = document.getElementById("test");
+
+        var text3 = "This is text Add..";
+
+        target3.insertAdjacentText("afterend", text3) //
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

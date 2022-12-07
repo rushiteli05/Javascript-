@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+
+<body>
+
+    <script>
+
+
+        //An object is a collection of key/value pairs or properties
+        // When the value is a function, the property becomes a method. 
+
+
+
+
+        let person = {
+            firstname: "Rushikesh",
+            lastname: "teli",
+            greet() {
+                console.log("hello,world..!", this.firstname)
+            },
+            getfullname: function () {
+
+                return this.firstname + " " + this.lastname
+
+            }
+        };
+        person.greet();
+
+        console.log(person.getfullname())
+
+
+
+        /*this value references the object that invokes the method.
+         Therefore, you can access a property using the this value.*/
+
+
+
+
+
+
+
+
+        //Constructor Function:-
+
+        //The name of a constructor function starts with a capital letter like Person, Document, etc.
+        //A constructor function should be called only with the new operator.
+
+
+
+        function Person(name, lname) {
+            this.name = name;
+            this.lname = lname;
+            this.getfullname = function () {
+                return this.name + " " + this.lname;
+            }
+        }
+
+
+
+        let person1 = new Person("Parsad", "Gavali");
+
+        console.log(person1.getfullname());
+
+        /* If return is called with an object, the constructor function returns that object instead of this.
+        If return is called with a value other than an object, it is ignored.*/
+
+
+
+
+        /*objects can inherit features from one another via prototypes.
+         Every object has its own property called prototype.*/
+
+
+
+
+        //ES6 class 
+
+
+        class piyu {
+            constructor(fname, lname) {
+                this.fname = fname;
+                this.lname = lname;
+            }
+            getfullname() {
+                return this.fname + " " + this.lname
+            }
+
+        };
+        let y = new piyu("dada", "shri");
+
+        console.log(y.getfullname())
+
+
+
+
+
+
+
+        //this..
+        /*  this references the object of which the function is a property. In other words,
+         the this references the object that is currently calling the function.
+        */
+
+
+
+
+
+        //for...in.
+
+
+        var rushi1 = {
+            firstname: "mayuresh",
+            lastname: "teli",
+        };
+
+        for (var dada in rushi1) {
+            console.log(dada + " " + rushi1[dada])
+        }
+
+
+
+
+        var decoration = {
+            color: "red"
+        }
+
+        var circle = Object.create(decoration);
+
+        circle.radius = 10;
+
+        for (var rys in circle) {
+            console.log(rys)
+        }
+
+
+        //loop in array..
+
+        var array = [30, 40, 50];
+
+        var x = 0;
+
+        for (var item in array) {
+            x += array[item]    //item index show karte
+        };
+
+        console.log(x)
+
+
+
+
+
+        //object destructuring....
+
+
+        let display = ({ fname, lname }) => console.log(`${fname}`)
+
+        let fass = {
+            fname: "tanaji"
+        };
+        display(fass);
+
+
+
+
+
+        var obj1 = new Object();
+
+        obj1.fname = "aru";
+        obj1.lname = "shub";
+        obj1.age = 43;
+
+        console.log(obj1.fname, obj1.age);
+
+
+
+        //nested object
+        let shubham = '';
+
+        var tata = {
+            name: "aniket",
+            age: 33,
+            cars: [
+                { name: "honda ", year: [1993, 1994, 1995] },
+                { name: "bmw ", year: [1883, 1884, 1885] }
+            ]
+        };
+
+        for (let i in tata.cars) {
+            shubham += tata.cars[i].name
+
+
+            for (let j in tata.cars) {
+                // shubham += tata.cars[i].year[j]
+                shubham += tata.cars[j].year
+            }
+        };
+        console.log(shubham)
+
+
+        //return..
+
+
+        var func = {
+            name: "harshad",
+            age: 54,
+            feature: function () {
+                return this.name + " " + this.age
+            },
+            getfullname1() {
+                return (this.name + " " + this.age + " " + this.hobby)
+            }
+        };
+
+        func.hobby = "sports"
+
+        console.log(func.getfullname1());
+
+
+        //get
+
+
+        var tyt = {
+            name: 'dadashri', age: 55,
+            get fullName() {
+                return this.name + " " + this.age
+            }
+        }
+        console.log(tyt.fullName);
+
+
+
+
+
+
+
+
+    </script>
+
+    <script>
+
+
+
+
+
+
+
+        let oj1 = {
+            name: "aniket",
+            address: "pune",
+        }
+        let oj2 = {
+            name: "mahesh",
+            address: "ahmednagar",
+            getprop(age) {
+                return this.name + " " + age;
+            }
+        }
+
+
+        // let out=oj2.getprop.apply(oj2,[12]);
+        // console.log(out);
+
+
+        let out1 = oj2.getprop.bind(oj1);
+        console.log(out1(33));
+
+
+
+
+
+        //class constructor....
+
+        class Reactangle {
+            constructor(length, width) {
+                this.lenght = length;
+                this.width = width
+
+            }
+            getans() {
+                return this.lenght * this.width
+            }
+
+        }
+
+        let v = new Reactangle(5, 6);
+
+        console.log(v.getans());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

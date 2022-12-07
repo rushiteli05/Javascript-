@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+<body>
+   
+    <script>
+
+        let person = {
+            firstname :'rushikesh',
+            lastname : 'teli',
+        }
+
+        person.age=23;
+
+        delete person.lastname; //delete..
+
+      console.log('lastname' in person);//property assign zali ahe ka nahi tyach ans bhetat..true or false mdhe.
+
+    //   for(rushu in person){
+    //     console.log(rushu +" : "+person[rushu]);
+    //   }
+
+
+    let person1 = ['Rushikesh','Chandrashekhar','Teli',25];
+
+    let person2 = {
+        firstname: 'rushi',
+        lastname:"teli",
+        fullname:function(){
+            return this.firstname+" "+this.lastname;
+        }
+        // living:{
+        //     city:'kolhapur',
+        //     country:'india'
+        // }
+    }
+
+    console.log(person2.fullname());
+
+
+
+
+    </script>
+
+</body>
+</html>

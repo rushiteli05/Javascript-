@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples Number</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        var x = 2;
+        var y = 2.785;
+        var z = 45e2;
+
+
+        document.writeln("<h3>Javascript Constants</h3>");
+
+        document.writeln("The Minimum Number in Javascript : " + Number.MIN_VALUE);
+
+
+
+        document.writeln("<hr>");
+
+
+        document.writeln("The Maximum Number in Javascript : " + Number.MAX_VALUE);
+
+
+        document.writeln("<hr>");
+
+
+        document.writeln("Positive Infinity : " + Number.POSITIVE_INFINITY);
+
+
+
+        document.writeln("<hr>");
+
+
+        document.writeln("Negative Infinity : " + Number.NEGATIVE_INFINITY);
+
+
+
+        document.writeln("<hr>");
+
+
+        document.writeln("NAN : " + Number.isNaN);
+
+
+        document.writeln("<br> to check '2' is a number : " + isNaN("hello"))
+        document.writeln("<br> to check '2' is a number : " + isNaN(2))
+        document.writeln("<br> to check '2' is a number : " + Number.isNaN("hello"))
+
+
+
+        document.writeln("<hr>");
+
+
+
+
+        function makeAdder(x) {
+            return function (y) {
+                return x + y;
+            };
+        }
+
+        const add5 = makeAdder(5);
+        const add10 = makeAdder(10);
+
+        console.log(add5(2)); // 7
+        console.log(add10(2)); // 12
+
+
+    </script>
+</body>
+
+</html>

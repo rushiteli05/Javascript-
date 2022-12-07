@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display</title>
+</head>
+
+<body>
+
+    <script>
+
+
+        /*Displaying the Object Properties by name
+          Displaying the Object Properties in a Loop
+          Displaying the Object using Object.values()
+          Displaying the Object using JSON.stringify()*/
+
+
+
+
+        //Displaying a JavaScript object will output [object Object].
+
+
+        var dada = {
+            name: "kushal",
+            age: 55,
+            lern: "brain works",
+        };
+
+        console.log(dada);
+
+
+
+
+        //The properties of an object can be collected in a loop:
+
+
+        const dada1 = {
+            name: "kushal",
+            age: 55,
+            lern: "brain works",
+        };
+
+
+        let rrr = " ";    //   imp...imp.. store value..
+
+        for (let k in dada1) {
+
+            rrr += dada1[k]
+        }
+
+        console.log(rrr);
+
+
+
+
+        //Any JavaScript object can be converted to an array using Object.values()..
+
+
+        const shubb = {
+            name: "vinayak",
+            passion: "student",
+            age: 22
+        }
+
+        var trt = Object.values(shubb);
+
+        console.log(trt);
+
+
+
+        //Any JavaScript object can be stringified (converted to a string) with the JavaScript function JSON.stringify():
+
+
+        const shubb5 = {
+            name: "virendra",
+            passion: "student",
+            age: 22,
+            today: new Date(),   //new date();
+        }
+
+        var rer = JSON.stringify(shubb5);
+
+        console.log(rer);
+
+
+        //JSON.stringify will not stringify functions:
+
+        const newfn = {
+            name: 'shubham',
+            age: function () {
+                return 30;
+            }
+        }
+
+        // var wew = JSON.stringify(newfn);
+
+        // console.log(wew);
+
+        newfn.age = newfn.age.toString();  // You have to convert functions to strings first:
+
+        var xx = JSON.stringify(newfn)
+
+        console.log(xx);
+
+
+
+
+        //JSON.stringify can stringify arrays....
+
+        const arr = ["John", "Peter", "Sally", "Jane"];
+
+        var sds = JSON.stringify(arr);
+
+        console.log(sds);
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

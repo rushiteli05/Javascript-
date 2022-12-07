@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script  type="text/javascript">
+        document.write("<h3>function without Parameter</h3>");
+
+        function showMe(){
+            alert("Alert button is clicked!");
+
+        }
+
+    </script>
+
+
+
+
+
+
+    <input type="button" onclick="showMe()" value="Alert!">
+
+    <script  type="text/javascript">
+    
+    document.write("<h3>function with Parameter</h3>");
+
+    function calculate(num){
+        alert(num*num);
+    }
+
+    </script>
+
+
+
+
+
+    <input type="button" value="square of 8" onclick="calculate(8)">
+    
+    <script  type="text/javascript">
+
+    document.write("<h3>function with return value</h3>");
+
+    function info(){
+        return( "Hello This is lernvern");
+    }
+
+    function getsum(num){
+        return num + 5;
+    }
+
+    function rusno(num){
+        return num*4;
+    }
+
+    document.write(info());
+
+    document.write("<br>")
+
+    document.write(getsum(10));
+
+    document.write("<br>")
+
+    document.write(rusno(4))
+
+
+
+
+    </script>
+
+   
+    
+</body>
+</html>

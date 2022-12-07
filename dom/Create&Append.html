@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create and Append</title>
+</head>
+
+<body>
+
+
+    <div id="aru">
+        <p id="p1">This is a inner HTML..</p>
+    </div>
+
+    <script>
+
+        //append chaild... -- (add krane)
+
+        let app = document.getElementById("aru");
+
+        let h1 = document.createElement("h1");
+
+        h1.className = 'Try'; // class name add krych asel tr
+
+        h1.id = 'Intro1' //id add krychi asel tr..
+
+        // let text = document.createTextNode("This is Heading..");  //text add kru shkto
+
+        // h1.appendChild(text);
+
+        app.appendChild(h1);
+
+
+
+        h1.textContent = "hiiiiii" //direct add kru shkto..
+
+
+
+        let read = document.getElementById("p1");
+
+        console.log(read.textContent); //--kay lihala ahe te read pan kru shkato..
+
+
+
+        // document.body.appendChild("h1")  //body chya bher add kraychhe asel tr..
+
+
+    </script>
+
+
+
+
+        <ul id="intro1">
+            <li>list a</li>
+            <li>list b</li>
+            <li>list c</li>
+            <li>list d</li>
+        </ul>
+
+<script>
+
+    let item = document.getElementById("intro1");
+
+    let item1 = document.createElement("li");
+
+    item1.textContent="new list add";
+
+    item.appendChild(item1);
+
+    //new li add .
+
+    let iteamm = document.getElementById("intro1");
+
+    let iteamm1 = document.createElement("li");
+
+    iteamm1.textContent = "2 nd new list add";
+
+    iteamm.appendChild(iteamm1)
+    
+</script>
+
+
+<script>
+
+
+    //insert Before..
+
+    var rushi = document.getElementById("intro1"); //parent
+
+    var rushi1 = document.createElement("li"); //element
+
+    rushi1.textContent="Saheb Hello";
+
+    rushi.appendChild(rushi1)
+
+     //..............//
+
+    var rushi3 = rushi.firstElementChild.nextSibling;//position
+
+    rushi.insertBefore(rushi1,rushi3);  //(element,position)
+
+
+    //.............................................................................//
+
+    let parent = document.body; //parent
+
+    let elem = document.createElement("h2"); //element
+
+    elem.textContent="This is new Heading ...!";
+
+    let getid = document.getElementById("intro1"); //position
+
+    parent.insertBefore(elem,getid);
+
+
+    
+
+
+
+</script>
+   
+</body>
+
+</html>

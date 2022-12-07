@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mixin</title>
+</head>
+
+<body>
+    <script>
+
+
+        // extends method madhe apn only one class la extend kru shkt0
+        //mixin mdhe multiple gosti yeka madhe add kru shkto...
+
+
+
+        let usefullname = {
+
+            sayHi() {
+
+                console.log("Hi...")
+            },            // imp ( , )
+
+            sayBye() {
+                console.log("Bye..")
+            }
+        };
+
+
+        let usefullname1 = {
+
+            sayHi() {
+
+                console.log("dada...")
+            },            // imp ( , )
+
+            sayBye() {
+                console.log("Bhau..")
+            }
+        };
+
+
+        class user {
+
+            constructor(name) {
+                this.name = name;
+            }
+        }
+
+
+        Object.assign(user.prototype, usefullname);
+
+        Object.assign(user.prototype, usefullname1);
+
+        let user1 = new user("Rushikesh");
+
+        // console.log(user1.sayHi());
+
+        console.log(user1);
+
+
+
+
+
+
+        // use expands...
+
+
+        let usefull = {
+
+            sayhii() {
+                console.log("Hiii...")
+            },
+            sayByee() {
+                console.log("BYee..")
+            }
+
+        }
+
+
+        class use {
+            constructor() {
+                this.lname = "Aditya Pawar"
+            }
+        }
+
+
+        class admin extends use {
+
+
+        }
+
+
+        Object.assign(admin.prototype, usefull);
+
+        let admin1 = new admin();
+
+        console.log(admin1)
+
+
+
+
+        //Example
+
+
+        obj = {
+            name: "shub",
+
+            say: function () {
+                return 'aru';
+            }
+        }
+
+        class abs {
+            constructor(nam1) {
+                this.nam1 = nam1;
+            }
+        }
+
+        Object.assign(abs.prototype, obj)
+
+        save = new abs("rushi");
+
+
+        console.log(save);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

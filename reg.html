@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regular Experssion</title>
+</head>
+
+<body>
+    <script>
+
+        let reg = /Rushikesh/; //this is a regular expression literal in js.
+        //  reg = /Rushikesh/g;   // g means global.
+        //  reg =/Rushikesh/i;  //i means case insensitive .capital or small asel tri index show karte.
+
+        console.log(reg);
+        console.log(reg.source);
+
+        let s = "this is great code with Rushikesh and also Rushikesh bhai";
+
+        //function to match expressions.
+        //1) exec() - This function will return an array for match or null for no match.
+        //kontya index la ahe te show krte ..nasel tr null
+
+        let result = reg.exec(s);
+        console.log(result)
+
+        // let result1 = reg.exec(s);
+        // console.log(result1)
+
+        // let result2 = reg.exec(s);
+        // console.log(result2)
+
+        // console.log(result)
+        // console.log(result.input)
+        // console.log(result.index);
+
+
+
+
+
+
+
+
+        //2) test()  - Returns true or false;
+
+        let result5 = reg.test(s);
+        console.log(result5) //-- this only print true if the "reg" is there in the string "s";
+
+ 
+
+
+
+
+
+
+        //3) match () - it will return an array of results or null;
+
+       // let result6 = reg.match(s) //this is wrong;
+
+        let result6 =s.match(reg);   
+        console.log(result6);
+
+
+
+
+
+
+
+        //4) search() - returns index of first match (nasel tr)else -1.
+
+        let result7 = s.search(reg);
+
+        console.log(result7); //match zal tr index nhi tr -1
+
+
+
+
+        // 5) replace() -Return new replaced string with all the replacements.
+        //(if no globle is not given ,first match will be replace);
+
+        let result8 = s.replace(reg , "Aditya");
+
+        console.log(result8) // all change krych asel tr global use
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

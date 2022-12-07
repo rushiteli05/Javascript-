@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pass by value and reference</title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+        //pass by value...mostely use for primitive data type
+
+
+        let a = 5;
+        let b = a;
+
+        b = b + 5;
+
+        console.log(a);
+        console.log(b);
+
+
+        //ex..
+
+
+
+
+
+
+
+
+
+
+        //pass by reference...
+
+
+        let obj1 = {
+            user: "Rushi",
+            password: "Kotoli",
+        }
+
+        let obj2 = obj1;
+
+        obj2.password = "kolhapur";
+
+        console.log(obj1)
+        console.log(obj2);
+
+
+
+
+
+
+
+
+        // function constructor javascript...
+
+
+        function student(fname, lname, age, color, rollno) {
+            this.fname = fname;
+            this.lname = lname;
+            this.age = age;
+            this.color = color;
+            this.rollno = rollno;
+        }
+
+        var student1 = new student("rushikesh", "teli", 25, "black", 22);   //new is imp...
+        var student2 = new student("Shri", "bhurke", 26, "white", 33);
+
+
+        student1.name = function () {
+            return this.fname + " " + this.lname
+        }
+
+        student1.nationlity = "indian";
+
+        console.log(student1);
+        console.log(student2);
+
+
+
+
+
+        /*Arrow functions do not have their own this. They are not well suited for defining object methods.
+
+        Arrow functions are not hoisted. They must be defined before they are used.
+
+        Using const is safer than using var, because a function expression is always constant value.
+
+        You can only omit the return keyword and the curly brackets if the function is a single statement.
+         Because of this, it might be a good habit to always keep them:Example*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

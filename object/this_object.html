@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This object</title>
+</head>
+
+<body>
+    <script>
+
+
+        // console.log(this); //refers to window object..
+
+
+
+        // "use strict"  //kel tr undefind ans..
+
+
+        // function sum() {
+        //     var add = 2 + 2;
+        //     console.log(add);
+        //     console.log(this); //refers to window object..
+        // }
+        // sum();
+
+
+        // const thapa={
+        //     name: "Rushikesh",
+        //     age:26,
+        //     features : function(){
+        //         var add =2+2; 
+        //         console.log(add,this.name);
+        //         console.log(this); //current object la refer krete
+        //     }
+        // }
+        // thapa.features();
+
+
+
+        function Student(first, last, age, cls, color) {
+
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.class = cls;
+            this.color = color;
+        }
+
+        var student1 = new Student("Rushikesh", "Teli", 25, 5, "pink");
+
+        student1.nationality = "Indian";
+
+        student1.name = function () {
+            return this.firstName + " " + this.lastName
+        }
+
+        var student2 = new Student("aditya", "Pawar", 26, 4, "black");
+
+
+
+        console.log(student1.name());
+        console.log(student2)
+
+
+
+
+
+
+
+
+        function Rushikesh(fname, lname, age, color, clas) {
+
+            this.firstName = fname;
+            this.lastName = lname;
+            this.age = age;
+            this.color = color;
+            this.class = clas;
+        }
+
+        var rushi1 = new Rushikesh("Mayuresh", "Teli", 28, "Pink", 5);
+
+        // rushi1.nationality="Indian";
+
+        Rushikesh.prototype.nationality = "indian";
+        Rushikesh.prototype.city = "kolhapur";
+
+        console.log(rushi1);
+
+
+        var rushi2 = new Rushikesh("Harshada", "Teli", 25, "Black", 4);
+
+        console.log(rushi2);
+
+
+
+        rushi1.name = function () {
+
+            return this.firstName + " " + this.lastName + " My Age is " + this.age
+        }
+        console.log(rushi1.name());
+
+
+
+
+
+
+        document.writeln("<h3>16-9-2022</h3>");
+
+        document.writeln("<h3>Hoisting</h3>");
+
+        document.writeln("<hr>");
+
+        rrr();
+        yyy();
+
+        function rrr() {
+            document.write("Hello<br>");
+
+        }
+
+
+        function yyy() {
+            document.writeln(" Rushikesh<br>");
+        }
+
+
+        var x; //declartion
+
+        document.writeln(x); //call ....x=undefind.  let or const madhe error yeto
+
+        x = 7; //assignment
+
+
+
+
+
+
+
+        let car = {
+            brand: 'Honda',
+            getBrand: function () {
+                return this.brand;
+            }
+        }
+
+        console.log(car.getBrand()); // Honda
+
+
+
+    </script>
+</body>
+
+</html>

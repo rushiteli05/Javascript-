@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+
+<body>
+    <script>
+
+
+        // lexcial scope..  inner function he parent function / global scope chya variable la axies kru shakte... 
+        var a = 'Hi Rushikesh';
+
+        function second() {
+            var b = 'I am Aditya.';
+
+            // console.log(c) - parent child chya variable la axis kru shkat nahi
+
+            function third() {
+                var c = 'Thank You';
+
+                console.log(a + b + c); //child parent chya variable la axis kru shakt..
+            }
+            third();
+        }
+
+
+        function four() {
+            var d = ' Namskar';
+            console.log(a + d); //(a+b+c+d) - b and c are not defind because yek function dusrya function chya scope  la interfair krt nhi..
+        }
+        four();
+        second();
+
+
+
+
+
+
+
+
+
+        // function numberGenerator() {
+        //   // Local “free” variable that ends up within the closure
+        //   var num = 6;
+        //   function checkNumber() { 
+        //     console.log(num);
+        //   }
+        //   num++;
+        //   return checkNumber;
+        // }
+
+        // var number = numberGenerator();
+        // number(); // 2
+
+
+        function sayHello() {
+            var say = function () {
+                console.log(hello);
+            }
+            // Local variable that ends up within the closure 
+            var hello = 'Hello, world!';
+            return say;
+        }
+        var sayHelloClosure = sayHello();
+        sayHelloClosure(); // ‘Hello, world!’
+
+
+
+
+
+        // currying method...
+
+
+        function sum(a) {
+            return function (b) {
+                return function (c) {
+                    return function (d) {
+
+                        return (a + b + c + d);
+                    }
+                }
+            }
+        }
+        var addd = sum(4)(5)(6)(7);
+        console.log(addd);
+
+        // or
+
+        const sumadd = (a) => (b) => (c) => (d) => a + b + c + d;
+
+        const add = sumadd(5)(6)(8)(8);
+        console.log(add);
+
+
+
+        //clousere ..
+
+        function rushi() {
+            const x = 20;
+            function mayur() {
+                console.log(x);
+            }
+            return mayur;
+        }
+        const san = rushi();
+        san();
+
+
+
+
+
+        function namef() {
+            var lname = function () {
+                console.log(rushi1);
+            }
+            var rushi1 = "Adivika Teli";
+            return lname;
+        }
+        var teli1 = namef();
+        teli1();
+
+
+
+
+
+
+        function arti() {
+            var x = "dada"
+            function mahi() {
+                console.log(x)
+
+            }
+            return mahi;
+        }
+
+        var patil = arti();
+
+        patil();
+
+
+
+
+
+
+
+        //example.
+
+        function rushi1() {
+            var a = "rushi";
+            function Rushi2() {
+                var b = " teli";
+                function rushi3() {
+                    var c = " kotoli"
+                    console.log(a + b + c);
+                }
+                rushi3()
+
+            }
+            Rushi2()
+        }
+        rushi1();
+
+
+        
+
+        function xxx(){
+            const u = "i hate u";
+            function yyy(){
+                console.log(u)
+            }
+            return yyy;
+
+        }
+        var c = xxx();         //problem xxx()...not ans 
+        c()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

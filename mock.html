@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+</head>
+
+<body>
+
+    <script>
+
+        const car = [];
+        car[0] = "volvo";
+        car[1] = "tata";
+        car[2] = "maruti";
+        car[0] = "shine";   //change 
+
+        console.log(car);
+
+
+        const person = ["rushi", "aditya", "parsad"];
+
+        console.log(person[1]);
+
+
+
+        const person1 = { fname: "rushi", lname: "teli", age: 25 };
+
+        console.log(person1.age);
+
+
+
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        let fruit1 = fruits.length;
+
+        // console.log(fruits.length);
+
+        let fruit = fruits[fruits.length - 1];  //accssing the element of array;
+
+        console.log(fruit);
+
+
+        let frut = " ";
+
+        for (i = 0; i < fruit1; i++) {
+            frut += fruits[i] + " ";
+        }
+
+        console.log(frut);
+
+
+
+
+        //for each
+
+        const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+
+        fruits1.forEach(function (value, index) {
+            console.log(index + " : " + value);
+        });
+
+
+        //or.....
+
+
+        const names = ["dada", "dada1", "dada3"];
+
+        names.forEach(rushi);
+
+        function rushi(value, index) {
+            console.log(index + ":" + value)
+        }
+
+
+
+
+        // filter metod....
+
+        let number = [33, 44, 55, 66, 77, 88];
+
+
+
+
+        var x = number.some((val) => {
+
+
+            return val > 30
+        })
+        console.log(x)
+
+
+
+        let nuum = [45, 46, 47, 48];  //(filter, some ,find)
+
+
+
+        let y = nuum.filter((val) => {
+
+            return val > 40;
+
+        })
+        console.log(y)
+
+
+
+
+
+        var x = [33, 44, 55, 66];
+
+        console.log(x.includes(42))
+
+    </script>
+
+
+    <script>
+
+        //includes array method..
+
+        let array = ['Apple', 'Orange', 'Grapes']
+
+        let F = array.filter(value => {
+
+
+            if (value.includes('a')) {
+
+                return value;
+
+            }
+        })
+        console.log(F)
+
+
+
+
+        var num8 = ["kolhapur", "pune", "sangli", "satara", "pune"];
+
+
+        let f = num8.filter((rrr) => {
+
+            if (rrr.includes("p")) {
+                return rrr
+            }
+
+
+        })
+        console.log(f)
+
+
+        console.log(num8.indexOf("kotoli"))
+
+
+
+
+
+
+        var x = [33, 44, 55, 66];
+
+        console.log(Array.isArray(5, 6, 7))
+
+        console.log(num8.lastIndexOf("pune"))
+
+
+        let mapa = x.map((x) => x * 4);
+
+        console.log(mapa)
+
+    </script>
+
+
+    <script>
+
+        //array
+
+        var color = ["red", "blue", "black", "pink"];
+
+        var bike = ["shine", "bullet", "activa"]
+
+        // color.splice(0,2,'white')  //delete  0,1  and add...
+
+        //  color.push("voilet"); //add krto
+
+        // color.unshift("yellow") // add krto
+
+        // color.pop() // delete the last element
+
+        // color.join( );  //creat a string byjoing element of array 
+
+        //document.write(color.join("-"));  //Tostring is aslo same
+
+        // color.toString();
+
+        //    document.write( color.slice(1,3)) //rempve red ,pink
+
+        //    var x = color.concat(bike) //merge two arrays
+
+        //    console.log(x);
+
+        // document.write(color.indexOf("black")) //position find ..nasel tr -1 return.
+
+        //var t = color.includes("white") //value asel tr true nasel tr false..
+
+        // find
+
+        var arr = [1, 2, 3, 4, 5, 6, 7]
+
+        var result = arr.find((element) => {
+            return element > 6
+        })
+
+        console.log(result);
+
+        //filter
+
+        var are = [3, 5, 6, 2, 8, 9, 5];
+
+        var res = are.filter((element) => {
+            return element > 4
+        })
+        console.log(res)
+
+
+
+
+
+
+
+
+
+    // console.log(color.length)   
+
+
+
+
+
+
+    </script>
+
+    <script>
+
+        //string..
+        /*  1) \n is replaced by the newline character
+            2) \t is replaced by the tab character
+            3) \r is replaced by the carriage-return character
+            4) \b is replaced by the backspace character
+            5)\\ is replaced by a single backslash (\)*/
+
+
+        let display = "The quick brown fox  jumps over the lazy dog."
+
+        console.log(display.replace("color", "paint"));
+
+
+        var str = "Hello  Rushikesh";
+
+        console.log(str.toUpperCase()); //capital
+
+        console.log(str.toLowerCase()); //small
+
+        console.log(str.charAt(6)); //char find 
+
+        console.log(str[6]) //char find
+
+    </script>
+
+    <script>
+
+        var x = null;
+
+        console.log(x)
+
+    </script>
+
+    <script>
+
+        //object data type
+
+        /*object is a complex data type that allowa to store
+        collection of data.....
+        an obj contains proerties ,defined as a key-value pair
+        */
+
+
+
+        var obj = {
+            name: "shubham",
+            lname: "dheshmukh",
+            age: 26,
+            position: "Developer"
+        }
+
+        console.log(obj.name, obj.lname, obj.age);
+
+
+        //array data type
+
+        /*array is a type of object for storing multiple values
+        in single variable*/
+
+
+        var colors = ["red", "black", "pink", "voilet"];
+
+        console.log(colors[2]);
+
+        console.log(typeof colors);
+
+
+
+        //function data type...
+
+        /*a function is called object that executes in block
+        of code.....function can be stored in array,object and variables.
+        fun can be passed as argument to other function and returned 
+        from fun*/
+
+        var greater = function () {
+            return "hello brain works"
+        }
+        console.log(greater());
+        console.log(typeof greater) //  find krnysathi use..
+
+
+
+        function display1(name) {
+            return "hello" + name;
+        }
+
+        function display2(person1, person2) {
+            return person1(person2);
+        }
+
+
+
+        var result = display2(display1, " rushi");
+
+        console.log(result)
+
+
+
+
+        console.log(parseInt("3.14")); //return 3
+        console.log(parseInt("20 years")); //return 20
+        console.log(parseFloat("50px")) //return 50
+
+    </script>
+
+
+
+    <script>
+
+        //The if...else Statement...
+
+        // var now = new Date();
+
+        // var dayofweek= now.getDay();
+
+        // if(dayofweek == "2"){
+        //     console.log( "have a nice weekwnd");
+        // }else{
+        //     console.log( "have a nice day");
+        // }
+
+
+
+
+        // if...else if...else Statement...!    
+
+
+        var new1 = new Date();
+
+        var dayofweek = new1.getDay();
+
+        if (dayofweek == 5) {
+            console.log("have a nice week")
+        } else if (dayofweek == 0) {
+            console.log("have a nice day");
+        } else {
+            console.log("mood of")
+        };
+
+
+
+
+
+        //The Ternary Operator...
+
+
+        var usertype;
+        var age = 21;
+
+        if (age < 18) {
+            usertype = "chaild";
+        } else {
+            usertype = "adult";
+        }
+        console.log(usertype);
+
+
+        // stntex--- var result = (condition) ? value1 : value2
+
+        var age = 21;   
+
+        var usertype = age < 23 ? "chaild" : "adult";  
+
+        console.log(usertype);
+
+
+
+
+
+        //switch case;
+
+        var week = new Date();
+
+        switch (week.getDay()) {
+            case 0:
+                console.log("today is sunday");
+                break;
+            case 1:
+                console.log("today is monday");
+                break;
+            case 2:
+                console.log("today is tuesday");
+                break;
+            case 3:
+                console.log("today is wednesday");
+                console.log("09/11/2022")
+                break;
+            case 4:
+                console.log("today is thursday");
+                break;
+            case 5:
+                console.log("today is friday");
+                break;
+            case 6:
+                console.log("today is saturday");
+                break;
+            case 7:
+                console.log("not getting informantion");
+                break;
+
+
+        }
+
+    </script>
+
+
+
+
+    <script>
+        let count = 0;
+
+        const item = [1, 5, 20, 28];
+
+        item.forEach(function rushi(no) {
+            if (no % 2 === 0) {
+                count++;
+            }
+        })
+        console.log(count);
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+
+        //call() method
+
+
+        function box1(height, width) {
+
+            this.height = height;
+            this.width = width;
+
+        };
+
+        function box2(height, width, color) {
+
+            box1.call(this, height, width);
+            this.color = color;
+            console.log(this)
+        }
+
+        function box3(height, width, color, feature) {
+            box2.call(this, height, width, color);
+            this.feature = feature;
+            console.log(this)
+        }
+
+        var rus = new box1("red", 22, 33, "good");
+        var rush1 = new box3("pink", 44, 55, "bad");
+
+        // console.log(rus);
+        // console.log(rush1)
+
+
+
+
+
+        var car1 = {
+            name: "rushi",
+
+            dada1() {
+                console.log(this.name);
+            },
+            dada2() {
+                console.log(this.name);
+
+            },
+            dada3() {
+                console.log(this.name)
+            }
+
+        }
+
+        var carname = {
+            name: "shubham",
+            fly() {
+                console.log("fly")
+            }
+        }
+
+        car1.dada3.call(carname);
+        carname.fly()
+
+
+
+
+        //apply();
+
+        // function cars(name,fueltype){
+        //     this.name = name;
+        //     this.fueltype=fueltype;
+        // }
+
+        // function oldcar(name,fueltype,year){
+        //     // cars.call(this,name,fueltype);
+        //     // this.year = year;
+        //     console.log(this);
+        // }
+
+        //  oldcar.apply(["breza","petrol",1999]);
+
+
+
+
+        //bind
+
+
+        function cars(name, fueltype) {
+            this.name = name;
+            this.fueltype = fueltype;
+            return this;
+        }
+
+        function oldcar(name, fueltype, year) {
+
+
+
+            this.name = name;
+            this.fueltype = fueltype;
+            this.year = year;
+
+
+            var x = cars.bind(this);
+            console.log(x("xcent", "disel"));
+
+            // console.log(this);
+
+
+        }
+
+        var y1 = new oldcar("breza", "petrol", 1999);
+
+
+
+    </script>
+
+
+
+
+    <script>
+        //break method..
+
+        for (let i = 0; i < 5; i++) {
+            console.log(i);
+            if (i == 3) {
+                break
+            }
+        };
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

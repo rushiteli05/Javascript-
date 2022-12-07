@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Value</title>
+</head>
+
+<body>
+
+    <script>
+
+        //ex 1.
+
+        function fullname(name, lname) {
+            var a = name + " " + lname;
+            return a;
+        };
+        console.log(fullname("Rushikesh", "Teli"));
+
+
+
+        //ex 2.
+
+        function sumMarks(math, eng, phy, che, geo) {
+            var r = math + eng + phy + che + geo;
+            return r;
+        }
+
+        var t = sumMarks(50, 60, 76, 75, 65);
+        console.log("obtain marks -" + t);
+
+
+        function percentage(total) {
+            var ta = total / 500 * 100;
+            return ta;
+        };
+
+        var e = percentage(t);
+        console.log("percent - " + e + "%");
+
+
+
+
+        //ex 3.
+        function compare(a, b) {
+            if (a > b) {
+                return 1;
+            } else if (a < b) {
+                return -1;
+            } else {
+                return 0;
+            };
+
+        }
+        console.log(compare(7, 7));
+
+
+
+
+
+        //ex 4..
+
+
+        function applejuice(apple, orange) {
+            const juice = `  Make a Juice of ${apple} Apple & ${orange} Orange `;
+            return juice;
+        }
+        let myJuice = applejuice(10, 0);
+        document.write(myJuice, "<br>");
+
+        let myJuice1 = applejuice(20, 7);
+        document.write(myJuice1, "<br>");
+
+        let myJuice2 = applejuice(30, 26);
+        document.write(myJuice2);
+
+        document.write("<hr>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

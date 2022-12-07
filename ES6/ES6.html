@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6</title>
+</head>
+
+<body>
+
+    <script>
+
+        //let--
+
+        //The let keyword allows you to declare a variable with block scope...
+        // Variables declared with the var keyword are function-scoped and hoisted at the top within its scope, 
+        //whereas variables declared with let keyword are block - scoped({}) and they are not hoisted.
+
+        let x = 10;
+
+        {
+            let x = 2;
+            console.log(x);
+        }
+
+        console.log(x);
+
+
+
+
+
+        for (let i = 0; i < 5; i++) {
+            // console.log(i);    //0,1,2,3,4
+        }
+        console.log(i);  //undefind
+
+        for (var i = 0; i < 5; i++) {
+            console.log(i);    //0,1,2,3,4
+        }
+        console.log(i);  //5
+
+
+
+
+
+
+        //The const Keyword----:---
+        // The new const keyword makes it possible to define constants.
+        // Constants are read-only, you cannot reassign new values to them. 
+        //They are also block-scoped like let.
+
+
+
+        const person = {
+            name: "rushikesh",
+            age: 25
+
+        }
+        person.age = 30;
+        console.log(person.age);   //age=30
+
+
+        const color = ["red", "blue", "white", "black"];
+
+        console.log(color[0]);
+
+        color[0] = "pink";
+        console.log(color[0]);
+
+
+
+
+
+        // The for...of Loop---:
+
+        let letters = ["A", "B", "C", "D"];
+
+        for (let letter of letters) {
+
+        }
+        console.log(letters)
+
+
+        let dada = "hello world";
+        var save = ''
+
+        for (let chara of dada) {
+            save += chara + " , ";
+
+        }
+        console.log(save);
+
+
+
+
+        // Template Literals ---:Template literals are created using back-tick (` `)
+
+        let a = 10;
+        let b = 20;
+
+        let result = `sum of ${a} and ${b} is equal to ${a + b}`;
+
+        console.log(result);
+
+
+
+
+
+
+
+        //Default Values for Function Parameters ---:
+
+        function rushi(name = "aditya") {
+            return `${name}`
+        };
+        console.log(rushi());
+        console.log(rushi('mayuresh'))
+
+
+        function tata(name) {
+            this.name = name;
+        }
+        var tar = new tata("rushi");
+        console.log(tar)
+
+
+
+
+
+
+
+
+
+
+        // Arrow Functions ....--:
+
+
+        var sum = (a, b) => {
+            return a + b;
+        }
+        console.log(sum(6, 7));
+
+
+        var text = (age) => {
+            if (age > 17) {
+                console.log("age is okkk")
+            } else if (age == 17) {
+                console.log("equal")
+            } else {
+                console.log("age is wrong")
+            }
+        }
+        text(17);
+
+
+
+        function person1(name, age) {
+            this.name = name;
+            this.age = age;
+            this.feature = function () {
+                console.log(this.name);
+
+                //  return function(){
+                //     console.log(this);     ----es5
+                //  }
+
+                return () => {
+
+                    console.log(`my name is ${this.name} ,my age ${this.age}`)
+
+                }
+            }
+        };
+
+        let dada1 = new person1("rushi", 25);
+
+        let rus = dada1.feature();
+
+        rus();
+
+
+
+
+
+        //The Rest Parameters ...--:
+
+        function shortname(...name) {
+            return name;
+        }
+        console.log(shortname("rushi", "shri", "shubham", "aditya"));
+
+
+
+        function myFunction(a, b, c, ...xyz) {
+            return xyz;
+        }
+        console.log(myFunction(22, 33, 44, 55, 66, 67));   //55,66,67
+
+
+
+
+        //The Spread Operator -The ... operator expands an iterable (like an array) into more elements:
+
+
+        function addnumber(a, b, c) {
+            return a + b + c;
+        }
+        let arr = [5, 6, 7, 9, 5, 4];
+
+        console.log(addnumber(a, ...arr));
+
+    //    console.log(addnumber.apply(this,arr));
+
+
+    //    console.log(addnumber(a,b,...arr));
+        
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

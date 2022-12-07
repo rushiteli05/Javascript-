@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+
+    <script>
+
+        document.write("<h3>Creating Array using literal</h3>");
+
+        var employee = ["abc", "def", "efg", "hij"];
+
+        for (value of employee) {
+            document.writeln(value + "<br>");
+        }
+    </script>
+
+    <script>
+        document.write("<h3>Creating Array using NewKeyword</h3>");
+
+        var emp = new Array();  //constructor cha 1st latter capital..
+
+        emp[0] = "Rushi";
+        emp[1] = "Aditya";
+        emp[2] = "Parsad";
+
+        for (value of emp) {
+            document.writeln(value + "<br>");
+        }
+
+
+    </script>
+
+    <script>
+
+        document.write("<h3>Creating Array using Constructor</h3>");
+
+        var car = new Array("XUV","Swift","Verna");
+
+        for(value in car){
+            document.writeln(car[value]);
+        }
+
+    </script>
+</body>
+
+</html>

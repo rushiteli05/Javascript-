@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack Function</title>
+</head>
+
+<body>
+    <script>
+
+        //higher order function => Function which takes another function as an argument is called
+
+
+        //Call Back funcion => Function which get passed as an argumrnt to another function is called..
+
+
+        let getRollno = () => {
+
+            setTimeout(() => {
+
+                console.log(`Geeting roll no :`);
+
+                let roll_no = [2, 3, 4, 5, 6];
+
+                console.log(roll_no);
+
+                setTimeout((rollno1) => {
+                    const biodata = {
+                        name: "Rushi",
+                        age: 26
+                    }
+                    console.log(`${biodata.name},${biodata.age}`);
+
+                })
+
+
+            }, 500);
+
+
+        }
+        getRollno();
+
+
+
+
+
+        function sayHello() {
+
+            console.log("Hello");
+        }
+
+        function Add(num1, num2, Rushi) {
+
+            console.log(num1 + num2);
+
+            Rushi();
+        }
+
+        function sayHi() {
+
+            console.log("Hi");
+
+        };
+
+        Add(10, 20, sayHello);
+
+        Add(20, 30, sayHi);
+
+        Add(30, 40, function () {
+
+            console.log("bye");
+        });
+
+
+
+        //example....
+
+        let Addd = (a, b) => {
+            return a + b;
+        }
+
+
+        let Sub = (a, b) => {
+            return a - b;
+        }
+
+
+        let Mult = (a, b) => {
+            return a * b;
+        }
+
+        //higher order fun;..
+
+        const Calculator = (num3, num4, oprator) => {
+
+            return oprator(num1, num2);
+        }
+
+        console.log(Addd(5, 8));
+        console.log(Sub(7, 4));
+        console.log(Mult(9, 8));
+
+
+
+
+
+        function first() {
+
+            // Simulate a code delay
+            setTimeout(function () {
+                console.log("Inside function: first");
+            }, 1500);
+
+        }
+
+        function second() {
+            console.log("Inside function: second");
+        }
+
+        first();
+        second();
+
+
+
+
+
+        // function first(callback) 
+        // { 
+        // 	// Simulate a code delay 
+        // 	setTimeout( function()
+        // 	{ 
+        // 		console.log("Inside function: first");
+        // 		callback();
+        // 	}, 1500 ); 
+        // } 
+
+        // first(function ()  // Anonymous function passed as callback
+        // {
+        // 	console.log("Inside function: second");
+        // }); 
+
+
+
+
+
+
+        function RushiTel() {
+
+            setTimeout(() => {
+
+                console.log("Hi I am Rushi");
+
+
+            }, 3000)
+        }
+
+
+        RushiTel();
+
+
+        //call back hell...
+
+
+        const getRollNo = () => {
+
+            setTimeout(() => {
+
+                // console.log(`Geeting Roll No`);
+
+                const Roll_No = [2, 3, 4, 5];
+
+                console.log(Roll_No);
+
+                setTimeout((Roll_No) => {
+
+                    const biodata = {
+
+                        name: 'Rushikesh',
+                        age: 25
+                    }
+                    console.log(`My roll no is ${Roll_No},My name is ${biodata.name}, Age ${biodata.age} years old`)
+
+                    setTimeout((name) => {
+
+                        biodata.gender = 'Male';
+
+                        console.log(`My roll no is ${Roll_No},My name is ${biodata.name}, Age ${biodata.age} years old,I am ${biodata.gender}`)
+
+                    }, 2000, biodata);
+
+
+
+                }, 2000, Roll_No[2]);
+
+            }, 2000);
+
+        };
+        getRollNo();
+
+
+
+//call backhell
+
+
+        function doStep1(init, callback) {
+            const result = init + 1;
+            callback(result);
+        }
+
+        function doStep2(init, callback) {
+            const result = init + 2;
+            callback(result);
+        }
+
+        function doStep3(init, callback) {
+            const result = init + 3;
+            callback(result);
+        }
+
+        function doOperation() {
+            doStep1(0, (result1) => {
+                doStep2(result1, (result2) => {
+                    doStep3(result2, (result3) => {
+                        console.log(`result: ${result3}`);
+                    });
+                });
+            });
+        }
+
+        doOperation();
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

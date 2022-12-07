@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Object</title>
+</head>
+
+<body>
+
+    <script>
+
+
+        /*
+        - name : value pairs (: -- colon);
+        -  A JavaScript object is a collection of named values.
+        -  The named values, in JavaScript objects, are called properties.
+        
+
+                    *create new objects*
+        1.Create a single object, using an object literal.
+        2.Create a single object, with the keyword new.
+        3.Define an object constructor, and then create objects of the constructed type.
+        4.Create an object using Object.create().
+        
+        */
+
+
+
+        //object literal
+
+        let person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "blue"
+        };
+
+
+        person.nationality = "indian";    // add a new property
+
+
+        const x = person;
+
+        x.age = 55;  // object madhel age change hoil...
+
+
+
+        console.log(person.firstName, person.lastName, 'my age is', person.age, person.nationality)
+
+
+
+        //or
+
+        console.log(person['firstName'], person['age']);
+
+
+
+
+
+
+        //new keyword
+
+        var rushi = new Object();
+
+        rushi.name = "aru";
+        rushi.lname = "andhare";
+        rushi.age = 25;
+        rushi.color = "black";
+
+        console.log(rushi.name, rushi.lname, rushi.age, rushi.color);
+
+        delete rushi.age; // deleting the property value...
+
+
+
+
+
+        /*   objectName.property      // person.age
+                
+
+             objectName["property"]   // person["age"]
+
+
+             objectName[expression]   // x = "age"; person[x]..*/
+
+
+
+
+
+
+        const person1 = {
+            fname: " John",
+            lname: " Doe",
+            age: 25
+        };
+
+        let txt = "";
+        for (let x in person1) {
+            txt += person1[x];
+        }
+
+        console.log(txt)
+
+
+        //nested object..
+
+
+        var shub = {
+            name: 'aditya',
+            age: 26,
+            eyecolor: 'black',
+            feature: {
+                name: 'parsad',
+                age: 24,
+                eyecolor: 'blue',
+            }
+        }
+
+
+        console.log(shub.name, shub.age, shub.feature.name, shub.feature.age)
+
+
+
+        //Nested JavaScript Objects and Arrays.
+
+        // Values in objects can be arrays, and values in arrays can be objects:
+
+        let store = '';
+        let myobj = {
+            name: "rushi",
+            age: 25,
+            cars: [
+                { name: "Honda ", models: [' swieft ', 'maruti ', 'Benz '] },
+                { name: 'BMW ', models: [' 320 ', '345 ', '654'] }
+            ]
+        }
+
+        for (i in myobj.cars) {
+            store += myobj.cars[i].name;
+
+            // console.log(myobj.cars[i].name)
+            for (j in myobj.cars) {
+                store += myobj.cars[i].models[j];
+            }
+        }
+
+        console.log(store);
+
+
+
+
+
+        //return....
+
+        var person2 = {
+            firstName: "John",
+            lastName: "Doe",
+            id: 5566,
+            fullName: function () {
+                return this.firstName + " " + this.lastName + " " + this.id + " " + this.nationality;
+            },
+            getname() {
+                return (this.id + this.lastName).toUpperCase();  //uppercase
+
+            }
+        };
+
+        console.log(person2.getname()); //new method es6..
+
+
+
+
+        person2.nationality = "indian";  //add new 
+
+        console.log(person2.fullName());
+
+
+
+
+        //toUpperCase..
+
+
+        let massage = "rushikeh teli";
+
+        document.write(massage.toUpperCase());
+
+
+
+
+
+
+
+        //get 
+
+        const getm = {
+
+            name: "ram",
+            age: 43,
+            language: "english",
+
+            get lan() {
+                return this.language;
+            }
+
+        }
+        console.log(getm.lan);
+
+
+
+
+
+
+
+
+        const person6 = {
+            firstName: "John",
+            lastName: "Doe",
+            get fullName() {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+
+
+
+        console.log(person6.fullName);
+
+
+
+
+
+
+
+
+        
+
+        // Define an object
+        const obj = { counter: 0 };
+
+        // Define Setters and Getters
+        Object.defineProperty(obj, "reset", {
+            get: function () { this.counter = 0; }
+        });
+        Object.defineProperty(obj, "increment", {
+            get: function () { this.counter++; }
+        });
+        Object.defineProperty(obj, "decrement", {
+            get: function () { this.counter--; }
+        });
+        Object.defineProperty(obj, "add", {
+            set: function (value) { this.counter += value; }
+        });
+        Object.defineProperty(obj, "subtract", {
+            set: function (value) { this.counter -= value; }
+        });
+
+
+
+        // Play with counter:
+        // obj.reset;
+        // obj.add = 5;
+        // obj.subtract = 1;
+        // obj.increment;
+        // obj.decrement;
+
+        console.log(Object.reset)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

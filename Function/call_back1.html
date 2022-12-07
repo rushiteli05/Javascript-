@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Back</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //call back --call back is function that you pass into another function as an argument.
+
+        function rushi() {
+
+            console.log("Hello")
+
+        }
+        function sum(num1, num2, callback) {
+
+            console.log(num1 + num2);
+            callback()
+
+
+        };
+
+        function aru() {
+            console.log(" hi....")
+        }
+        //    let a = 20;
+        //    let b = 30;
+        //    sum(a,b)
+        sum(30, 40, aru);
+        sum(30, 50, rushi)
+
+
+        //ex ..2
+
+        const per1 = (name, callback) => {
+
+            console.log(`hi i am ${name}. i will call back u later`);
+            callback();
+
+        };
+
+        const per2 = () => {
+            console.log(`I am fine bro`);
+        }
+
+        per1("rushikesh", per2);
+
+
+
+        //ex 3
+
+        const rushi1 = (name, callback1) => {
+            setTimeout(function () {
+                console.log(`i am ${name},i amback in 3 sec`)
+            }, 3000);
+            callback1()
+        }
+
+        const rushi2 = () => {
+            console.log(`i am here`)
+        }
+
+        rushi1("dada", rushi2);
+
+        // rushi2();
+
+
+
+
+        //ex 4..
+
+        function isodd(number) {
+            return number % 2 != 0;
+        }
+
+        function iseven(number) {
+            return number % 2 == 0;
+        }
+
+        function filter(numbers, fn) {
+            let results = [];
+
+            for (const number of numbers) {
+                if (fn(number)) {
+                    results.push(number);
+                }
+            }
+            return results;
+        };
+
+        let numbers = [1, 2, 4, 5, 6, 7];
+
+        console.log(filter(numbers, isodd));
+        console.log(filter(numbers, iseven));
+
+
+
+        //ex 5..
+
+        function aru1(name, callback) {
+            setTimeout(() => {
+
+                console.log(`see after 5 sec.my name ${name}`)
+
+            }, 5000)
+            callback();
+        };
+
+        function aru2() {
+            console.log(`Beain Works....!`);
+        }
+        aru1("rushikesh", aru2);
+
+
+        //ex 6 find odd no 
+
+
+        const array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        function findodd(array1) {
+            const emptyarr = [];
+
+            for (i = 0; i < array1.length; i++) {
+
+                if (array1[i] % 2 !== 0) {
+
+                    emptyarr.push(array1[i]);
+                }
+            }
+            return emptyarr;
+        }
+
+        console.log(findodd(array1));
+
+
+
+
+
+        // ex 7 find even no..
+
+        const array2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+
+        function findeven(array2) {
+
+            const even = [];
+
+            for (i = 0; i < array2.length; i++) {
+                if (array2[i] % 2 === 0) {
+                    even.push(array2[i])
+                }
+            }
+            return even;
+        }
+        console.log(findeven(array2));
+
+
+
+
+
+        const radius = [2, 3, 4, 5, 6]
+
+        const numm = (radius) => {
+
+            const rushi = [];
+            for (i = 0; i < radius.length; i++) {
+                rushi.push(Math.PI * radius[i] * radius[i])
+            }
+            return rushi;
+        };
+
+        console.log(numm(radius));
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

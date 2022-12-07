@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+
+<body>
+    <script>
+
+        const pobj1 = new Promise((resolve, reject) => {
+
+            setTimeout(() => {
+
+                let RollNo = [2, 3, 4, 5, 6];
+
+                resolve(RollNo);
+
+                // reject("error while comu..");
+
+            }, 2000);
+        })
+
+        pobj1.then((Rollno) => {
+
+            console.log(Rollno);
+
+        }).catch((error) => {
+
+            console.log(error);
+        })
+
+
+
+
+
+        let promise = new Promise((resolve, reject) => {
+
+            let x = 1;
+
+            if (x == 1) {
+                resolve("ok");
+            } else {
+                reject('error');
+            }
+
+        });
+
+        promise.then((rushi) => {
+            console.log(rushi)
+        });
+
+
+
+
+        //Example of setTimeout in Promise....
+
+        let promise1 = new Promise(function (resolve, reject) {
+
+            setTimeout(() => {
+                resolve('Rushikesh Teli..');
+            }, 3000);
+
+        });
+
+        promise1.then((aru) => {
+            console.log(aru)
+        });
+
+
+
+        //example of Promise chining..
+
+        new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(1);
+            }, 2000);
+        })
+
+        .then(function(value){
+            alert(value);
+            return value*2;     //1*2=2
+        }).then(function(value){
+            alert(value);
+            return value*3;     //2*3=6
+        }).then(function(value){
+            alert(value);
+            return value*4;     //6*4=24
+        }).then(function(value){
+            alert(value);
+        
+        });
+
+
+
+        
+        // new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         resolve(1);
+        //     }, 2000);
+        // }).then(function(value){
+        //     alert(value);
+        //     return new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         resolve(2);
+        //     }, 2000);
+        // }).then(function(value){
+        //     alert(value);
+        //     return new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         resolve(3);
+        //     }, 2000);
+        // }).then(function(value){
+        //     alert(value);
+        // })
+    
+
+
+
+
+
+
+
+//example promise...
+
+        function getUserbyId(id){
+
+            if(typeof id !== 'number' || id<0){
+                throw new Error('Invalid Id Number');
+            }
+
+            return new Promise((resolve,reject)=>{
+                resolve({
+                    id:id,
+                    username:'RUshikesh'
+                });
+
+            });
+
+        }
+        getUserbyId(7)
+        .then(rushi => console.log(rushi.username))
+        .catch(reeor => console.log(error));
+
+
+
+
+
+//methods of API...
+
+
+Promise.all([
+    new Promise(resolve => setTimeout(resolve(3),3000)),
+    new Promise(resolve => setTimeout(reject(new Error("its an error")),3000)),
+    new Promise(resolve => setTimeout(resolve(6),2000)),
+   
+]).then(alert);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This </title>
+</head>
+
+<body>
+    <script>
+
+        // object => object method =>  regular function => undifinde (value of this);
+
+
+        obj1 = {
+            name: "Rushikesh",
+
+            method: function () {
+                function fun() {
+                    // return this.name;
+
+                }
+                fun() //  value undifinde bec  context of this refer to the window.
+
+
+                // return fun.call(this);  //use call then value will get.
+            }
+        }
+
+        console.log(obj1.method());
+
+
+
+
+
+
+
+
+
+
+
+
+        // object => object method =>  arrow  function =>  (get value);
+
+        //in the arrow function this value refers to outer function scope.
+
+        obj2 = {
+
+            name: " Shubham",
+
+            method1: function () {
+                fun = () => {
+                    return this.name;
+
+                    //console.log(this.name)
+                }
+                return fun();     // use return IMP;
+                //fun()
+            }
+        }
+
+        obj2.method1();
+
+
+
+
+
+
+
+        //function constructor
+
+
+
+        function fun1(name, age) {
+
+            this.name = name;
+            this.age = age;
+
+            this.get = () => {
+                return this.name + this.age;
+            }
+
+        }
+
+        save = new fun1("Aru ", 24);
+
+        console.log(save.get());
+
+
+
+        //self  
+
+        obj3 = {
+            name: "Amit",
+
+            method3: function () {
+
+                self = this;
+                function fun2() {
+                    console.log(self.name)
+                }
+                fun2();
+            }
+
+
+        }
+        obj3.method3();
+
+
+
+
+        // thissss.......
+
+        var rushi = 200;
+
+        function aru() {
+
+            this.rushi = 100
+        }
+
+        var dada = new aru();
+
+        console.log(dada);      //100 this refers to scope.
+
+        console.log(this.rushi);   //200 this refers to global 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

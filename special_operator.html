@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Special Operators</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	document.write("<h3> Special Operators </h3>")
+
+	var x = true;
+	var y = false;
+
+	var person = {
+		fname : "rushi",
+		lname: "teli",
+		age:25,
+		eyecolor:"brown"
+
+	};
+	class abc{
+
+	}
+
+	/*if(condition){
+	      executes if condition is true
+	}else{
+	      executes if condition is false
+	}*/
+
+	var z = y ? 2 : 4 ; 
+	document.write( "Value of z: " + z); //conditional operator - if eklse condition.
+	document.write("<br>")
+
+	let a = (1,3,2);
+	document.write("value of a: " + a); //Comma operator.
+		document.write("<br>")
+         
+        delete person.lname;
+		document.write("Delete lastname from the object: " + person.lname); //delete
+
+			document.write("<br>")
+
+			var z = 'age' in person ? true : false; 
+	 //in operator
+
+	document.write("<br>")
+
+	document.write( "if person is a instance of prototype object: " + (person instanceof(Array))); //instanceof
+
+document.write("<br>")
+
+	//new operator
+	var b = new(abc)
+     
+
+	document.write( "type of x is: " + (typeof x)); //typeof operator
+
+	document.write("<br>");
+</script>
+
+<!-- <a href="javascript:void(0)">hello</a>   void operator. -->
+
+</body>
+</html>

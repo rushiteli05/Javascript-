@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Example of variable</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+		var a = 10;
+		var _a = "Hello";
+
+		document.write(_a);
+	</script>
+
+	<br>
+	<script type="text/javascript">
+		var $123 = 50;
+		document.write($123);
+	</script><br>
+
+	<script type="text/javascript">
+
+		var x = 10;
+		var y = 20;
+		var z = x + y;
+		document.write(z);
+
+		{
+			var temp = "this is a temp";
+			document.write("<br>");
+			document.write(temp);
+		}
+		document.write(temp);
+		document.write("<br>")
+
+		const constant = "this is a constant value";
+		document.write(constant);
+	</script>
+
+	<!-- this is example of global... accessible in both block scope and outside of block -->
+	<script type="text/javascript">
+
+		var data = 100;
+
+		function a() {
+
+			document.write(data);
+		}
+		function b() {
+
+			document.write(data);
+		}
+		document.write(data);
+		a();
+		b();
+
+
+	</script>
+
+	<!-- this is example of local...only accessible in block scope -->
+	<script type="text/javascript">
+
+		function abc() {
+			var x = 10;
+			document.write(x);
+		}
+		abc();
+	</script>
+	<!--  example of  global (window) -->
+
+	<script type="text/javascript">
+
+		var temp = "this is golbal window value";
+
+		function ab() {
+			document.write("<br>");
+			var u = "rushi"
+
+			window.r = "this is s variable";
+			document.write(window.r);
+			alert(window.temp);
+		}
+		ab();
+
+		document.write(window.r);
+
+		document.write("<br>");
+
+		document.write(window.u);
+
+	</script>
+</body>
+
+</html>

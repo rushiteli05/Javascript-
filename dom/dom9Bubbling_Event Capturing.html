@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubbling & Event Capturing</title>
+</head>
+<style>
+    body {
+        background-color: rgb(192, 185, 198);
+        padding: 100px;
+    }
+
+    #mydiv {
+        background-color: brown;
+        padding: 50px;
+    }
+</style>
+
+<body>
+    <div id="mydiv">
+        <button id="btn">Click Me</button>
+    </div>
+
+
+
+<script>
+
+    //bubbling.......
+
+    let b = document.getElementById("mydiv");
+
+    let d = document.getElementById("btn");
+
+    b.addEventListener('click',divclicked);    //default value is false......
+
+    d.addEventListener('click',btnclicked);
+
+    document.body.addEventListener('click',bodyclicked);   
+
+    function divclicked(event){
+        console.log("div clicked...");
+        event.stopPropagation();          //only div clicked show karel...
+    }
+
+    
+    function btnclicked(){
+        console.log("button clicked...")
+    }
+
+    
+    function bodyclicked(){
+        console.log("body clicked...")
+    }
+
+
+</script>
+
+
+<script>
+    //capturing......
+    
+    // let b1 = document.getElementById("mydiv");
+
+    // let d1 = document.getElementById("btn");
+
+    // b1.addEventListener('click',divclicked,true);
+
+    // d1.addEventListener('click',btnclicked,true);
+
+    // document.body.addEventListener('click',bodyclicked,true);     //(event,function,use capture)
+
+    // function divclicked(){
+    //     console.log("div clicked...");
+    // }
+
+    
+    // function btnclicked(){
+    //     console.log("button clicked...")
+    // }
+
+    
+    // function bodyclicked(){
+    //     console.log("body clicked...")
+    // }
+
+</script>
+
+
+
+
+
+</body>
+
+</html>

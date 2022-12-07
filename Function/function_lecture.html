@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+
+
+        function rush() {
+            var r = "Rushikesh chandrashekhar teli ";
+            document.write(r);
+            function aru() {
+                var a = "Brain works ";
+                document.write(a);
+            }
+            aru();
+        }
+        rush();
+
+
+
+
+
+
+
+
+
+
+        document.write("<hr>");
+        var mark = 66;
+
+        if (mark > 35) {
+            document.write("student is pass");
+        } else {
+            document.write("student is fail");
+        }
+
+
+
+
+
+
+        let info = {
+            firstname: "Rushikesh sagar",
+            lastname: "Teli",
+            age: 25,
+            20: 1998,
+
+            display: function () {
+                console.log(this.firstname, 'chandrashekhar', this.lastname, 'my age is', this.age, this[20]);
+                console.log(this[20]);
+
+            }
+        }
+        info.display();
+
+
+
+
+
+
+
+
+        // The following example shows nested functions:
+
+        function addsquare(a, b) {
+            function square(x) {
+                return x * x;
+            }
+            return square(b) + square(b);
+        }
+
+        console.log(addsquare(2, 7));
+
+
+
+
+
+        document.write("<hr>");
+
+        function myIntro() {
+            document.writeln("My Name is Rushikesh");
+        }
+        myIntro();
+
+
+
+
+
+
+        //parameter in function
+
+        document.write("<hr>");
+
+        function fullName(fname, lname) {
+            document.writeln("Hello ", fname, lname, "<br>");
+
+        }
+        fullName("Rushikesh ", 'Teli.');
+        fullName("Aditya ", "Pawar.");
+        fullName("Shri ", "Bhurke.<br>");
+
+
+
+        function sumNo(a, b) {
+            document.writeln(a + b);
+        }
+        sumNo(4, 5);
+
+
+
+
+
+
+
+
+
+
+
+        //return value of function..
+
+        document.write("<hr>");
+
+        function myFev(fname, lname) {
+            var w = "hello " + fname + lname;
+            return w;
+        }
+        var e = myFev("rushikesh ", "Teli");
+
+        document.writeln(e);
+
+
+
+
+
+        document.writeln('Total Subject - 5 <br> Total Marks - 500');
+
+        function rushTel(marathi, hindi, enlish, chemistry, history) {
+            var t = marathi + hindi + enlish + chemistry + history;
+            return t;
+        }
+        var y = rushTel(50, 70, 80, 89, 44);
+        document.writeln("<br>marks obtain by y: " + y);
+
+        function aru(tm) {
+            var u = y / 500 * 100;
+            return u;
+        }
+        var f = aru(y);
+        document.writeln("<br> Percentage of f: " + f)
+
+
+        document.write("<hr>");
+
+
+
+
+
+        function juicer(apple, orange) {
+            return apple + orange;
+        }
+        var d = juicer("make a juice of  " + 10, " apple and " + 0 + " oranges<br>")
+
+        document.writeln(d);
+
+        var i = juicer("make a juice of  " + 20, " apple and " + 7 + " oranges<br>");
+        document.writeln(i);
+
+        var p = juicer("make a juice of  " + 30, " apple and " + 26 + " oranges");
+        document.writeln(p);
+
+
+
+
+
+
+
+
+        document.write("<hr>");
+
+        function applejuice(apple, orange) {
+            const juice = `  Make a Juice of ${apple} Apple & ${orange} Orange `;
+            return juice;
+        }
+        let myJuice = applejuice(10, 0);
+        document.write(myJuice, "<br>");
+
+        let myJuice1 = applejuice(20, 7);
+        document.write(myJuice1, "<br>");
+
+        let myJuice2 = applejuice(30, 26);
+        document.write(myJuice2);
+
+        document.write("<hr>");
+
+
+
+
+
+
+
+        function rushi(id, name, clas) {
+            this.id = id;
+            this.name = name;
+            this.clas = clas;
+
+        }
+        var k = new rushi(234, "rushikesh", "teli")
+        console.log(k);
+
+
+
+
+
+    </script>
+</body>
+
+</html>

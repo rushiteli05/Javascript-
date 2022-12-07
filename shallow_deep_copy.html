@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shallow and deep copy</title>
+</head>
+
+<body>
+
+    <script>
+        //shallow copy
+
+        var obj = {
+            name: "rushikesh",
+        }
+
+        // var user = Object.assign({},obj);
+
+        let user = { ...obj }   //reference..
+
+
+        user.name = "Aditya";
+
+        console.log(obj)
+
+
+
+        //deep copy
+
+        let obj1 = {
+            name: "shubhm",
+            property: {
+                city: "kolhapur",
+                state: "marashtra"
+            },
+
+
+        }
+        let p3 = JSON.parse(JSON.stringify(obj1));
+
+
+
+        p3.property.city = "pune";
+        console.log(obj1)
+        console.log(p3);
+
+
+
+     //eg
+
+        let obj3 = {
+            name: "Parsad"
+        };
+
+        let p2 = obj3;
+
+        p2.name = "prashant"
+
+        // let user4 ={...p2}  //spread 
+
+        let user3 = Object.assign({}, p2);  //object.assign method
+
+        console.log(user3)
+
+
+        //ex 
+
+        let shiava = {
+        name:"Shivansh",
+        }
+
+        let praa = shiava;
+
+        // praa.name = "rushi"
+
+        let result = {...praa}
+        
+
+        console.log(result);
+
+
+
+    </script>
+
+</body>
+
+</html>

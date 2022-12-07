@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure1</title>
+</head>
+
+<body>
+
+    <script>
+
+        /*closure is a function having access tonthe scope.
+        it preserve the data from outside..
+        a closure is an inner function that has access the outer 
+        functions variable.
+
+        every closure have three scope..
+        1 - local scope (own scope)..
+        2 - outer function scope..
+        3 - global scope..*/
+
+
+
+        //ex 1
+
+        function outerfun() {
+            var j = "j is local variable of outer function";
+            // console.log(j);
+            function innerfun() {
+                var k = "k is a local variable of inner function";
+
+                console.log(k)
+                console.log(j)
+
+            }
+            innerfun();
+
+        };
+        outerfun();
+
+
+
+        //ex 2
+
+        const otfn = (a, c) => {
+            let b = 10;
+            const infn = () => {
+                let sum = a + b + c;
+                console.log(`sum of two no : ${sum}`)
+            }
+            infn()
+
+        }
+        otfn(5, 5)
+
+
+
+        //ex 3 - return..
+
+        function rushi1(p) {
+            let r = 15;
+            function rushi2() {
+                let sum = r + p;
+                console.log(sum);
+            }
+            return rushi2();
+        }
+
+        rushi1(5);
+
+
+
+        function x() {
+            var a = 7;
+            function y() {
+                console.log(a);
+            }
+            a = 100;    //a = 100
+            return y;
+        }
+        var r = x();
+
+        console.log(r);
+
+        r();
+
+
+
+
+
+
+
+        //ex..
+
+
+        var r = 10;
+
+        (function () {
+            var t = 15;
+            function two() {
+                var a = 20;
+                var total = r+ t + a;
+                console.log( total);
+            }
+            two()
+        })()
+
+    
+      
+
+
+
+
+
+
+
+        var x = 10;
+
+        function foo() {
+            var y = 20; // free variable
+            function bar() {
+                var z = 15; // free variable
+                return x + y + z;
+            }
+            return bar;
+        }
+
+        var test = foo();
+
+        console.log(test()); // 45
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

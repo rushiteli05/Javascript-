@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Adjacent HTML</title>
+</head>
+
+<body>
+    <!-- Insert Adjacent HTML -->
+
+
+    <!-- beforebeging -->
+    <div id="intro">
+        <!-- selected -->
+        <!-- afterbeging -->
+        <h2>Heading</h2>
+        <p>This is a P tag</p>
+        <!-- beforeend -->
+    </div>
+    <!-- afterend -->
+
+
+    <script>
+        let elm = document.getElementById("intro");
+
+        let html = "<h1>New Heading 1</h1>";
+
+        // elm.insertAdjacentHTML("beforebegin",html); //div chya adhi add..
+
+        // elm.insertAdjacentHTML("afterbegin",html);  //div madhe add..
+
+        // elm.insertAdjacentHTML("beforeend",html);
+
+        elm.insertAdjacentHTML("afterend", html); //div chya bher yenar
+
+    </script>
+
+
+
+
+<button id="btn" name="form1">send</button>
+
+
+<script>
+
+//  Change Attribute..
+
+var rushi=document.getElementById("btn");
+
+// rushi.setAttribute("input","Shubhu")  //(value,name)  direct add kru shkto id,class etc
+
+// var getat = rushi.getAttribute("name")
+
+// var remove = rushi.removeAttribute("name");
+
+var check = rushi.hasAttribute("name"); //truse or false mdhe ans bhtete..asel value tr true.else false..
+
+console.log(check);
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

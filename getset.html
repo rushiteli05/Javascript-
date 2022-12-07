@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetSet</title>
+</head>
+
+<body>
+    <script>
+
+
+        obj = {
+            name: "rushikesh",
+            age: 26,
+
+
+            get getname() {
+                return this.name.toUpperCase();
+            }
+        };
+
+        console.log(obj.getname);
+
+
+
+
+
+        obj1 = {
+            name: "shubham",
+            age: 25,
+
+            
+            set setname(n) {
+                return this.name = n.toUpperCase();
+            },
+
+            get setname(){
+            return this.name;
+        }
+
+           
+        }
+
+         obj1.setname="ajit"
+
+
+        console.log(obj1.setname);
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

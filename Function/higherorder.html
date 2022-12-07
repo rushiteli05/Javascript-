@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher Order</title>
+</head>
+
+<body>
+
+    <script>
+
+        const add = (a, b) => {
+            return a + b;
+        };
+
+        const sub = (a, b) => {
+            return a - b;
+        };
+
+        const mul =(a,b) =>{
+            return a * b;
+        };
+
+        const master = (num1,num2,callback)=>{
+
+            return callback(num1,num2);
+        }
+
+        console.log(master(8,6,add));
+        console.log(master(8,6,sub));
+        console.log(master(8,6,mul));
+
+
+
+
+         //ex ..
+
+         function isodd(number) {
+            return number % 2 != 0;
+        }
+
+        function iseven(number) {
+            return number % 2 == 0;
+        }
+
+        function filter(numbers, fn) {      //filter is HOF..
+            let results = [];
+
+            for (const number of numbers) {
+                if (fn(number)) {
+                    results.push(number);
+                }
+            }
+            return results;
+        };
+
+        let numbers = [1, 2, 4, 5, 6, 7];
+
+        console.log(filter(numbers, isodd));
+        console.log(filter(numbers, iseven));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

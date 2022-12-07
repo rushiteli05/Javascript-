@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance </title>
+</head>
+
+<body>
+    <script>
+
+
+        class empoly {
+
+            constructor(name) {
+                this.name = name
+            }
+            msg() {
+                console.log("hiiiii.....")
+            }
+        }
+        class manager extends empoly {
+
+            constructor(name, lname) {
+                super(name);
+                this.lname = lname;
+
+            }
+
+            msg() {
+                console.log("Hello......")
+            }
+
+            info() {
+                super.msg();   //perent classs cha use
+
+                // this.msg();   //present class mdhle use
+
+                console.log(this.name + " " + this.lname + " " + "i am Web Developer")
+            }
+
+
+        }
+
+
+        class main extends manager {
+
+
+        }
+
+        let newemp = new main("rushikesh", "teli");
+
+        // newemp.msg();
+
+        // console.log(newemp.info());
+
+        console.log(newemp);
+
+
+
+
+
+
+        //example...
+
+        class ram {
+            constructor(name1) {
+                this.name = name1
+            }
+        }
+
+        class shyam extends ram {
+            constructor(name1, age) {
+
+                super(name1);
+                this.age = age;
+            }
+        }
+
+
+        class laxman extends shyam {
+            constructor(name, age, greade) {
+                super(name, age);
+                this.greade = greade;
+
+            }
+
+            displayed() {
+                // return (this.name+' '+this.age+" "+this.greade)
+                console.log(this.name + ' ' + this.age + " " + this.greade)
+            }
+
+
+        }
+
+
+        let shub = new laxman("Rushikesh", 24, "A")
+
+        shub.displayed();
+
+        console.log(shub)
+
+        // console.log(shub.displayed()); // return
+
+
+
+
+
+        //ex....
+
+
+        class car{
+            constructor(brand){
+                this.brand=brand;
+
+            }
+
+            present(){
+                return "i have a " + this.brand;
+            }
+        }
+
+        class model extends car{
+            constructor(brand,mod){
+                super(brand);
+                this.mod =mod;
+            }
+
+            show(){
+                return this.present() + "it is a "+ this.mod
+            }
+        }
+
+        let car1 = new model("Ford","Mustang");
+
+        car1.show()
+
+        console.log(car1)
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+        //hasOwnProperty()..
+
+        let person = {
+            name: "Rushikesh"
+        }
+
+        console.log(person.hasOwnProperty("name"))
+
+        // to check value is in the object or not..return ans im true false
+
+
+
+        //constructor function
+
+        function person1(n) {
+            this.name = n
+        }
+
+
+        let ru = new person1("rushieks")
+
+        console.log(ru);
+
+
+
+
+        function person2(fname, lname, age) {
+            this.fname = fname;
+            this.lname = lname;
+            this.age = age;
+
+        }
+
+        person2.prototype.fullname = function () {            //object in prototype
+            console.log(this.fname + " " + this.lname)
+        }
+
+
+        let per1 = new person2("Aditya", " Pawar", 25);    //valuse copy pest hotat
+        let per2 = new person2("Prasad", "Gavli", 24);
+
+        console.log(per1)
+        console.log(per2)
+
+
+
+
+        //chaining..
+
+        function creature(ls) {
+            this.lifespan = ls
+        }
+
+        creature.prototype.breath = function () {
+            console.log("Breathing..,...,.!")
+        }
+
+
+        // let creat = new creature(100);
+
+        // console.log(creat)
+
+
+        function person3(fname, lname, age) {
+            this.fname = fname;
+            this.lname = lname;
+            this.age = age;
+            creature.call(this,'80 years')
+
+        }
+
+        person3.prototype.fullname = function () {            //object in prototype
+            console.log(this.fname + " " + this.lname)
+        }
+
+
+        person3.prototype = Object.create(creature.prototype)     //or
+
+        // person3.prototype.__proto__=creature.prototype          //imp...
+
+
+        let pers1 = new person3("Aditya", " Pawar", 25);    //valuse copy pest hotat
+        let pers2 = new person3("Prasad", "Gavli", 24);
+
+        console.log(pers1.lifespan)
+        console.log(pers2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

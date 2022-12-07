@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+
+<body>
+
+    <script>
+
+        //parse method is convert string into object..
+        //in the json formate we can store and tranfor the data.
+
+        let data = `{
+    "name":"Rushikesh",
+    "age":25,
+    "ia_student":true,
+    "passport_no": null,
+    "p_lang":["c","c++","javascript","java"],
+    "address":{
+        "city":"kolhapur",
+        "state":"maharashtra",
+        "pincode":416230
+    }
+ } `;
+
+        let obj = JSON.parse(data);
+
+        // console.log(obj["p_lang"][3]);  //arrguments are pass in array[].
+
+
+
+
+
+
+        let stud1 =
+            `{
+                
+            "students":[
+        {
+            "name1":"rushikesh",
+            "age":25
+        },
+        {
+            "name":"aditya",
+            "age":23
+        },
+        {
+            "name":"prasad",
+            "age":22
+        }
+    ]
+}`;
+
+        let alls = JSON.parse(stud1);
+
+        console.log(alls["students"]['name1']);  //prb name1 was undefind.
+
+
+
+
+
+        //JSON.Stringify - toconvert object into string
+
+        let rushi = {
+            name: "Advika",
+            age: 2,
+            color: "pink"
+        };
+
+        var string = JSON.stringify(rushi);
+
+        // console.log(JSON.parse(string))  //convert string into object
+
+
+
+
+        var obj1 = { "name": "John", "age": "39", "city": "New York" };
+
+        var text = JSON.stringify(obj, function (key, value) {
+            if (key == "city") {
+                return value.toUpperCase();
+            } else {
+                return value;
+            }
+        });
+
+
+        console.log(obj1)
+
+
+
+        var text = '{ "name":"John", "age":"39", "city":"New York"}';
+        var obj2 = JSON.parse(text, function (key, value) {
+            if (key == "city") {
+                return value.toUpperCase();
+            } else {
+                return value;
+            }
+        });
+
+        console.log(obj2);
+
+
+
+
+
+        const text1 = '["Ford", "BMW", "Audi", "Fiat"]';
+        const myArr = JSON.parse(text1);
+
+        console.log(myArr);
+
+
+
+
+        // Functions are not allowed in JSON.
+
+        //If you need to include a function, write it as a string.
+
+        const text2 = '{"name":"John", "age":"function() {return 30;}", "city":"New York"}';
+
+        const fun = JSON.parse(text2);
+
+        console.log(fun["name"])
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polymorphism</title>
+</head>
+<style>
+    * {
+        background-color: aqua;
+    }
+
+    #div1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #rushi {
+       
+        text-decoration: underline;
+
+    }
+
+
+    #show {
+        align-items: center;
+        margin-top: 100px;
+    }
+</style>
+
+<body>
+
+    <div id="div1">
+
+        <p id="rushi"> example of Polymorphism</p>
+
+        <form id="rushi2">
+
+            <input type="radio" id="car" name="vehicle" value="car">
+            <label for="car">Car</label><br>
+            <input type="radio" id="truck" name="vehicle" value="truck">
+            <label for="truck">Truck</label><br>
+
+            <input type="button" value="Submit" onclick="process(this.form)">
+
+
+
+        </form>
+
+        <div>
+
+            <p id='show'></p>
+        </div>
+    </div>
+    <script>
+
+        class Vehicle {
+
+            run() {
+                return `plz select a drive  vehicle`
+            }
+        }
+
+        class Car {
+
+            run() {
+                return `drive a car`
+            }
+        }
+
+        class Truck {
+
+            run() {
+                return `drive a Truck`
+            }
+        }
+
+
+
+        function process(get) {
+            type = get.vehicle.value
+
+            var v;
+
+            if (type == 'car') {
+                v = new Car()
+            }
+
+            else if (type == 'truck') {
+                v = new Truck()
+            }
+
+            else {
+                v = new Vehicle()
+            }
+
+            store_value = v.run()
+
+            document.getElementById('show').innerHTML = store_value
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /* using Polymorphism you can override any property and method*/
+
+        // declare parent class
+
+        class Employee {
+            constructor(name) {
+                this.name = name
+                this.age = 24;
+            };
+
+            //declare method;
+
+            EmployeeName() {
+                console.log(`Employee name ${this.name}`);
+
+            }
+        }
+
+        //inherit parent class
+
+        class Member extends Employee {
+
+            constructor(name, salary) {
+                super(name);   //call parent class constructor with chaild class parameter.
+                this.name = name;
+                this.salary = salary;
+                this.age = 25;  //override age property of parent class.
+            }
+
+            //override EmployeeName() method of parent class.
+
+            EmployeeName() {
+                console.log(`Employee name ${this.name},age ${this.age} and salary ${this.salary}`);
+            }
+
+
+        };
+
+
+        //creat instance of chaild class
+
+        const result = new Member("Rushikesh", 2600);
+
+        result.EmployeeName();   //execute chaild class method;
+
+
+
+
+        //example 2 ..
+
+        class animals {
+
+            speck() {
+                console.log(`Animals have different types of sodun.`)
+            }
+
+        }
+
+        class cat extends animals {
+            speck() {
+                console.log(`Cat says mewo mewo.`)
+            }
+        }
+
+        class dog extends animals {
+            speck() {
+                console.log("dog says bhuu bhuu")
+            }
+        }
+
+        const obj1 = new cat();
+
+        const obj2 = new dog();
+
+
+        obj1.speck();
+        obj2.speck();
+
+
+
+
+    //example 3 
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

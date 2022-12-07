@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Mathods</title>
+</head>
+<style>
+    body {
+        text-align: center;
+    }
+</style>
+
+<body>
+
+    <script>
+
+        document.write("<h3>Math Methods</h3>");
+
+        document.write("<h3> abs() :</h3>"); //negative no pass kela tr positivr ans..
+
+        var num1 = -4;
+        document.writeln("abs() of " + num1 + " : " + Math.abs(num1));
+        document.writeln("<br>abs() of 4  : " + Math.abs(4));
+        document.writeln("<br>abs() of [] : " + Math.abs([]));
+        document.writeln("<br>abs() of [2,5] : " + Math.abs([2, 5]));
+        document.writeln("<br>abs() of  null: " + Math.abs(null));
+        document.writeln("<br>abs() of : " + Math.abs());
+
+
+
+
+        document.write("<h3>Ceil () : </h3>");
+
+        document.writeln("<br>Ceil() of 4.2 : " + Math.ceil(4.2));
+        document.writeln("<br>Ceil() of -4.2 : " + Math.ceil(-4.2));
+
+
+
+
+
+        document.write("<h3>exp () : </h3>");
+
+        document.writeln("<br>exp() of 1 : " + Math.exp(1));
+        document.writeln("<br>exp() of 3 : " + Math.exp(3));
+
+
+
+
+
+
+        document.write("<h3>floor () : </h3>"); //returns largest integer value,lower than or equal to the given number.. (opposite of ceil)
+
+        document.writeln("<br>floor() of 7.3 : " + Math.floor(7.2));
+        document.writeln("<br>floor() of -7.3 : " + Math.floor(-7.2));
+
+
+
+
+
+
+        document.write("<h3>log () : </h3>"); //returns natural logarthm of a no.
+
+        document.writeln("<br>log() of 1 : " + Math.log(1));
+        document.writeln("<br>log() of 0 : " + Math.log(0));
+
+
+
+
+
+
+        document.write("<h3>max () & min() : </h3>"); // returns maximum value of the given number.
+
+        document.writeln("<br>maximum number from 8,4,5,6,9 : " + Math.max(8, 4, 5, 6, 9));
+
+        document.writeln("<br>minimum number from 8,4,5,6,9 : " + Math.min(8, 4, 5, 6, 9));
+
+
+
+
+
+        document.write("<h3>pow () : </h3>");
+
+        document.writeln("<br> 2 to the power 3 is : " + Math.pow(2, 3));
+
+
+
+
+
+
+        document.write("<h3>Random () : </h3>"); //it returns random number between 0 (inclusive) and 1 (exclusive).
+
+        
+
+        document.writeln("<br> random no between 0 to 1() : ", Math.random());
+
+        document.writeln("<br> Creat an OTP using Math.random() : ", Math.floor(Math.random()*100)); //random no dete tyachya mdhle.
+
+        let x =Math.floor(Math.random()*(25-15)) + 15;
+        document.write(x);
+
+
+
+
+
+
+
+        document.write("<h3>round () : </h3>"); //closest integer value of the given number.
+
+
+        document.writeln("<br> round() value of 7.4 : ", Math.round(7.4));
+        document.writeln("<br> round() value of 7.7 : ", Math.round(7.7));
+        document.writeln("<br> round() value of -7.4 : ", Math.round(-7.4));
+        document.writeln("<br> round() value of -0.6: ", Math.round(-0.6));
+
+
+
+
+
+
+
+
+        document.write("<h3>sign () : </h3>"); //returns the sigh of given number..positive and negative.
+
+
+        document.writeln("<br> sign() value of 5 : ", Math.sign(5));
+        document.writeln("<br> sign() value of -5 : ", Math.sign(-5));
+        document.writeln("<br> sign() value of 0 : ", Math.sign(0));
+
+
+
+
+
+
+
+        document.write("<h3>sqrt () : </h3>");//returns the square root of given number..
+
+        document.writeln("<br> sqrt() value of 4 : ", Math.sqrt(4));
+        document.writeln("<br> sqrt() value of 1.8564 : ", Math.sqrt(1.8564));
+
+
+
+
+
+
+        document.write("<h3>cbrt () : </h3>");//returns cube root of given number
+
+        document.writeln("<br> cbrt() value of 9 : ", Math.cbrt(9));
+
+
+
+
+        document.write("<h3>trunc () : </h3>");//returnsan integer part of the given number;
+
+
+        document.writeln("<br> trunc() value of 12.9 : ", Math.trunc(12.9));
+        document.writeln("<br> trunc() value of -0.65 : ", Math.trunc(-0.65));
+
+
+
+
+
+
+        document.write("<h2>Trignometric Methods () : </h2>");
+
+
+         document.writeln("<h3>Trignometric document values for 1/2 (1.5) : </h3>");
+
+         document.writeln("sin(1/2) : " , Math.sin(1.5) , "<br>");
+          document.writeln("cos(1/2) : " , Math.cos(1.5) , "<br>");
+         document.writeln("tan(1/2) : " , Math.tan(1.5) , "<br>", "<br>");
+
+         
+        document.write("<h3>Hyperbolic Trignometric Methods () : </h3>");
+
+         document.writeln("sinh(1/2) : " , Math.sinh(1.5) , "<br>");
+          document.writeln("cosh(1/2) : " , Math.cosh(1.5) , "<br>");
+         document.writeln("tanh(1/2) : " , Math.tanh(1.5) , "<br>", "<br>");
+
+         document.write("<h3> RadarcianTrignometric Methods () : </h3>");
+
+         document.writeln("radian asin(1/2) : " , Math.asin(1.5) , "<br>");
+          document.writeln("radian acos(1/2) : " , Math.acos(1.5) , "<br>");
+         document.writeln("radian atan(1/2) : " , Math.atan(1.5) , "<br>", "<br>");
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

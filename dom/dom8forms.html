@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+</head>
+<body>
+    
+    <form action="">
+        <input type="text" id="myinput">
+    </form>
+
+    <script>
+
+        let x = document.getElementById("myinput");
+
+        x.addEventListener("focus",myfocusfun);
+
+        x.addEventListener("blur",myblurfun);
+
+        function myfocusfun(){
+            x.style.background="yellow"
+        };
+
+        function myblurfun(){
+            x.style.background="white"
+        };
+
+        //change --value deil de show karte jeva lihun baher click krel teva
+
+        // x.addEventListener("change",function(){
+        //     console.log(this.value);
+        // })
+
+
+        //inpute -- value deil teva lagte gate krel
+        
+        x.addEventListener("input",function(){
+            console.log(this.value);
+        })
+
+
+    </script>
+</body>
+</html>
